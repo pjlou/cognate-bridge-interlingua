@@ -1,0 +1,568 @@
+{
+ "bridge_language": "ia",
+ "patterns": [
+  {
+   "slug": "pronoun-case",
+   "name": "Pronoun case",
+   "family": "Romance",
+   "summary": "Subject, object, and possessive forms: io / me / mi.",
+   "description": "Interlingua keeps the case system Latin had on pronouns, even though it drops it everywhere else. Each person has a subject form (io, tu, ille, illa, nos, vos, illes), an object form (me, te, le, la, nos, vos, les), a possessive adjective (mi, tu, su, nostre, lor), and a possessive pronoun (mie, tue, sue, nostre, lore). Every Romance language makes the same distinctions with recognisably related forms, so this table is the highest-value thing to memorise here: it unlocks the pronoun systems of four languages at once.",
+   "source_note": "Gode & Blair, Interlingua: A Grammar of the International Language, 2nd ed. 1955, §54 (p. 21)",
+   "difficulty_level": 2,
+   "drill_kind": "multiple_choice",
+   "position": 1,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "Io vide le can.",
+     "gloss_en": "I see the dog.",
+     "highlight": "Io",
+     "prompt": "I see the dog.",
+     "answer": "Io vide le can.",
+     "distractors": [
+      "Ille me vide.",
+      "Iste libro es le mie.",
+      "Nos les cognosce."
+     ],
+     "note": "Subject form: io.",
+     "parallels": {
+      "es": "Yo veo el perro.",
+      "fr": "Je vois le chien.",
+      "it": "Io vedo il cane.",
+      "pt": "Eu vejo o cão."
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "Ille me vide.",
+     "gloss_en": "He sees me.",
+     "highlight": "me",
+     "prompt": "He sees me.",
+     "answer": "Ille me vide.",
+     "distractors": [
+      "Iste libro es le mie.",
+      "Io vide le can."
+     ],
+     "note": "Object form: me, not io.",
+     "parallels": {
+      "es": "Él me ve.",
+      "fr": "Il me voit.",
+      "it": "Lui mi vede.",
+      "pt": "Ele me vê."
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "Nos les cognosce.",
+     "gloss_en": "We know them.",
+     "highlight": "les",
+     "prompt": "We know them.",
+     "answer": "Nos les cognosce.",
+     "distractors": [
+      "Io vide le can.",
+      "Iste libro es le mie."
+     ],
+     "note": "nos serves as both subject and object; les is the plural object form.",
+     "parallels": {
+      "es": "Nosotros los conocemos.",
+      "fr": "Nous les connaissons.",
+      "it": "Noi li conosciamo.",
+      "pt": "Nós os conhecemos."
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "Iste libro es le mie.",
+     "gloss_en": "This book is mine.",
+     "highlight": "le mie",
+     "prompt": "This book is mine.",
+     "answer": "Iste libro es le mie.",
+     "distractors": [
+      "Ille me vide.",
+      "Io vide le can.",
+      "Nos les cognosce."
+     ],
+     "note": "The possessive pronoun mie, distinct from the adjective mi, and normally with the article.",
+     "parallels": {
+      "es": "Este libro es el mío.",
+      "fr": "Ce livre est le mien.",
+      "it": "Questo libro è il mio.",
+      "pt": "Este livro é o meu."
+     }
+    },
+    {
+     "position": 5,
+     "bridge_text": "Su soror ama su can.",
+     "gloss_en": "His sister loves his dog.",
+     "highlight": "su",
+     "prompt": "His sister loves his dog.",
+     "answer": "Su soror ama su can.",
+     "distractors": [
+      "Io vide le can."
+     ],
+     "note": "su covers his, her, and its, and never agrees with what is owned. Spanish su behaves the same way; French and Italian do not, and pick the form from the thing owned.",
+     "parallels": {
+      "es": "Su hermana ama su perro.",
+      "fr": "Sa sœur aime son chien.",
+      "it": "Sua sorella ama il suo cane.",
+      "pt": "A irmã dele ama o cão dele."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "object-proclisis",
+   "name": "Object pronouns before the verb",
+   "family": "Romance",
+   "summary": "Io le vide, not *Io vide le — the object pronoun comes first.",
+   "description": "An unstressed object pronoun goes in front of a finite verb: 'Io le vide', literally 'I him see'. English puts it after, so this needs unlearning rather than learning, and it is one of the first things that makes a beginner's Spanish or French sound wrong. Every Romance language does the same. The exception is worth as much as the rule: after an infinitive, a participle, or an imperative the pronoun follows instead, giving 'Io vole vider le'. Spanish and Portuguese agree ('quiero verlo'), Italian agrees ('voglio vederlo'), and French does not, keeping the pronoun before the infinitive ('je veux le voir').",
+   "source_note": "Gode & Blair, Interlingua: A Grammar of the International Language, 2nd ed. 1955, §§67–69 (p. 25)",
+   "difficulty_level": 3,
+   "drill_kind": "multiple_choice",
+   "position": 2,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "Io le vide.",
+     "gloss_en": "I see him.",
+     "highlight": "le",
+     "prompt": "I see him.",
+     "answer": "Io le vide.",
+     "distractors": [
+      "Io vole vider le.",
+      "Io non lo sape.",
+      "Ille se lava."
+     ],
+     "note": "Object before the finite verb.",
+     "parallels": {
+      "es": "Yo lo veo.",
+      "fr": "Je le vois.",
+      "it": "Io lo vedo.",
+      "pt": "Eu o vejo."
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "Illa nos ama.",
+     "gloss_en": "She loves us.",
+     "highlight": "nos",
+     "prompt": "She loves us.",
+     "answer": "Illa nos ama.",
+     "distractors": [
+      "Io non lo sape.",
+      "Ille se lava."
+     ],
+     "note": null,
+     "parallels": {
+      "es": "Ella nos ama.",
+      "fr": "Elle nous aime.",
+      "it": "Lei ci ama.",
+      "pt": "Ela nos ama."
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "Io non lo sape.",
+     "gloss_en": "I do not know it.",
+     "highlight": "non lo",
+     "prompt": "I do not know it.",
+     "answer": "Io non lo sape.",
+     "distractors": [
+      "Illa nos ama.",
+      "Io vole vider le.",
+      "Io le vide."
+     ],
+     "note": "With both a negator and a pronoun, the pronoun sits closer to the verb: non lo sape.",
+     "parallels": {
+      "es": "Yo no lo sé.",
+      "fr": "Je ne le sais pas.",
+      "it": "Io non lo so.",
+      "pt": "Eu não o sei."
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "Io vole vider le.",
+     "gloss_en": "I want to see him.",
+     "highlight": "vider le",
+     "prompt": "I want to see him.",
+     "answer": "Io vole vider le.",
+     "distractors": [
+      "Io le vide.",
+      "Ille se lava.",
+      "Io non lo sape."
+     ],
+     "note": "After an infinitive the pronoun follows. French is the outlier and keeps it in front: je veux le voir.",
+     "parallels": {
+      "es": "Quiero verlo.",
+      "fr": "Je veux le voir.",
+      "it": "Voglio vederlo.",
+      "pt": "Quero vê-lo."
+     }
+    },
+    {
+     "position": 5,
+     "bridge_text": "Da me le libro.",
+     "gloss_en": "Give me the book.",
+     "highlight": "Da me",
+     "prompt": "Give me the book.",
+     "answer": "Da me le libro.",
+     "distractors": [
+      "Io le vide.",
+      "Io vole vider le.",
+      "Ille se lava."
+     ],
+     "note": "After an imperative the pronoun follows, as it does across Romance.",
+     "parallels": {
+      "es": "Dame el libro.",
+      "fr": "Donne-moi le livre.",
+      "it": "Dammi il libro.",
+      "pt": "Dá-me o livro."
+     }
+    },
+    {
+     "position": 6,
+     "bridge_text": "Ille se lava.",
+     "gloss_en": "He washes himself.",
+     "highlight": "se",
+     "prompt": "He washes himself.",
+     "answer": "Ille se lava.",
+     "distractors": [
+      "Illa nos ama.",
+      "Io vole vider le.",
+      "Io le vide."
+     ],
+     "note": "Reflexive se follows the same placement rule. Romance uses reflexives far more widely than English does, often where English would use a passive.",
+     "parallels": {
+      "es": "Él se lava.",
+      "fr": "Il se lave.",
+      "it": "Lui si lava.",
+      "pt": "Ele se lava."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "infinitive-classes",
+   "name": "The three infinitive classes",
+   "family": "Romance",
+   "summary": "-ar, -er, -ir: the class predicts the target-language infinitive.",
+   "description": "Interlingua verbs end in -ar, -er, or -ir, the same three classes Latin left to every Romance language. The class is worth knowing because it predicts the shape of the infinitive in the target: Italian adds a vowel (cantar to cantare), Spanish and Portuguese usually leave -ar and -ir alone, and French reshapes -ar to -er (cantar to chanter). It also predicts which conjugation the verb will take once you get to a language that conjugates.",
+   "source_note": "Gode & Blair, Interlingua: A Grammar of the International Language, 2nd ed. 1955, §§80ff (pp. 29ff)",
+   "difficulty_level": 2,
+   "drill_kind": "multiple_choice",
+   "position": 3,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "cantar",
+     "gloss_en": "to sing",
+     "highlight": null,
+     "prompt": "cantar (to sing) — which class?",
+     "answer": "-ar",
+     "distractors": [
+      "-er",
+      "-ir"
+     ],
+     "note": "First class. Regular across all four targets.",
+     "parallels": {
+      "es": "cantar",
+      "fr": "chanter",
+      "it": "cantare",
+      "pt": "cantar"
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "vender",
+     "gloss_en": "to sell",
+     "highlight": null,
+     "prompt": "vender (to sell) — which class?",
+     "answer": "-er",
+     "distractors": [
+      "-ar",
+      "-ir"
+     ],
+     "note": "Second class. French contracts to -re.",
+     "parallels": {
+      "es": "vender",
+      "fr": "vendre",
+      "it": "vendere",
+      "pt": "vender"
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "dormir",
+     "gloss_en": "to sleep",
+     "highlight": null,
+     "prompt": "dormir (to sleep) — which class?",
+     "answer": "-ir",
+     "distractors": [
+      "-ar",
+      "-er"
+     ],
+     "note": "Third class. Unchanged in three of the four targets.",
+     "parallels": {
+      "es": "dormir",
+      "fr": "dormir",
+      "it": "dormire",
+      "pt": "dormir"
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "scriber",
+     "gloss_en": "to write",
+     "highlight": null,
+     "prompt": "scriber (to write) — which class?",
+     "answer": "-er",
+     "distractors": [
+      "-ar",
+      "-ir"
+     ],
+     "note": "Second class, and a reminder that the class predicts the ending, not the stem: every target reshapes scrib- differently.",
+     "parallels": {
+      "es": "escribir",
+      "fr": "écrire",
+      "it": "scrivere",
+      "pt": "escrever"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "invariant-verb",
+   "name": "Where the scaffold stops: verb agreement",
+   "family": "Romance",
+   "summary": "Interlingua does not conjugate. Every target language does.",
+   "description": "Interlingua uses one verb form for every person: io canta, tu canta, ille canta, nos canta. This is the largest single simplification in the language, and the one place where relying on Interlingua will actively mislead you, because all four target languages inflect the verb for person and number and none of them treat it as optional. The pattern is drilled the other way round from the others: the Interlingua sentence is the prompt, and the point is to notice how much the target adds. Use Interlingua for the vocabulary and the word order, and expect to learn conjugation from scratch.",
+   "source_note": "Gode & Blair, Interlingua: A Grammar of the International Language, 2nd ed. 1955, §§80ff (pp. 29ff)",
+   "difficulty_level": 1,
+   "drill_kind": "multiple_choice",
+   "position": 4,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "Io canta.",
+     "gloss_en": "I sing.",
+     "highlight": "canta",
+     "prompt": "I sing.",
+     "answer": "Io canta.",
+     "distractors": [
+      "Nos canta.",
+      "Tu canta.",
+      "Illes cantava."
+     ],
+     "note": null,
+     "parallels": {
+      "es": "Yo canto.",
+      "fr": "Je chante.",
+      "it": "Io canto.",
+      "pt": "Eu canto."
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "Tu canta.",
+     "gloss_en": "You sing.",
+     "highlight": "canta",
+     "prompt": "You sing.",
+     "answer": "Tu canta.",
+     "distractors": [
+      "Io canta.",
+      "Nos canta.",
+      "Illes cantava."
+     ],
+     "note": "Same verb form as io canta. No target language agrees.",
+     "parallels": {
+      "es": "Tú cantas.",
+      "fr": "Tu chantes.",
+      "it": "Tu canti.",
+      "pt": "Tu cantas."
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "Nos canta.",
+     "gloss_en": "We sing.",
+     "highlight": "canta",
+     "prompt": "We sing.",
+     "answer": "Nos canta.",
+     "distractors": [
+      "Io canta.",
+      "Tu canta.",
+      "Illes cantava."
+     ],
+     "note": "Still canta. Compare how far the four targets diverge here.",
+     "parallels": {
+      "es": "Nosotros cantamos.",
+      "fr": "Nous chantons.",
+      "it": "Noi cantiamo.",
+      "pt": "Nós cantamos."
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "Illes cantava.",
+     "gloss_en": "They sang.",
+     "highlight": "cantava",
+     "prompt": "They sang.",
+     "answer": "Illes cantava.",
+     "distractors": [
+      "Io canta.",
+      "Nos canta.",
+      "Tu canta."
+     ],
+     "note": "One past tense, -va, where Romance distinguishes preterite from imperfect. Spanish cantaron and cantaban are both cantava in Interlingua.",
+     "parallels": {
+      "es": "Ellos cantaron.",
+      "fr": "Ils ont chanté.",
+      "it": "Loro cantarono.",
+      "pt": "Eles cantaram."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "word-building",
+   "name": "Building words from affixes",
+   "family": "Romance",
+   "summary": "One root plus a productive affix: nation, national, nationalitate.",
+   "description": "Interlingua is built to be extended by analogy. A root takes a productive affix and the result is a real word, so nation gives national, nationalitate, nationalismo, nationalista, and international, all without consulting a dictionary. The affixes are the ones Romance already shares, which is what makes this the highest-leverage pattern in the language: learning that -itate marks a quality gets you Spanish -idad, French -ité, Italian -ità, and Portuguese -idade in one step, and those endings are stable enough to guess through.",
+   "source_note": "Gode & Blair, Interlingua: A Grammar of the International Language, 2nd ed. 1955, §§135ff (pp. 56ff)",
+   "difficulty_level": 2,
+   "drill_kind": "multiple_choice",
+   "position": 5,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "nation → nationalitate",
+     "gloss_en": "nation → nationality",
+     "highlight": "-itate",
+     "prompt": "Which suffix turns an adjective into the quality it names?",
+     "answer": "-itate",
+     "distractors": [
+      "-ista",
+      "-eria",
+      "-mente"
+     ],
+     "note": "-itate names a quality. Compare Spanish -idad, French -ité.",
+     "parallels": {
+      "es": "nacionalidad",
+      "fr": "nationalité",
+      "it": "nazionalità",
+      "pt": "nacionalidade"
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "rapide → rapidemente",
+     "gloss_en": "rapid → rapidly",
+     "highlight": "-mente",
+     "prompt": "Which suffix makes an adverb from an adjective?",
+     "answer": "-mente",
+     "distractors": [
+      "-itate",
+      "-abile",
+      "-ero"
+     ],
+     "note": "-mente attaches to the full adjective. Three of the four targets use the same suffix; French wore it down to -ment.",
+     "parallels": {
+      "es": "rápidamente",
+      "fr": "rapidement",
+      "it": "rapidamente",
+      "pt": "rapidamente"
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "amar → amabile",
+     "gloss_en": "to love → lovable",
+     "highlight": "-abile",
+     "prompt": "Which suffix means 'able to be ...ed'?",
+     "answer": "-abile",
+     "distractors": [
+      "-mente",
+      "-ista",
+      "-itate"
+     ],
+     "note": "-abile from -ar verbs, -ibile from -er and -ir verbs.",
+     "parallels": {
+      "es": "amable",
+      "fr": "aimable",
+      "it": "amabile",
+      "pt": "amável"
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "lacte → lacteria",
+     "gloss_en": "milk → dairy",
+     "highlight": "-eria",
+     "prompt": "Which suffix names the shop or premises dealing in something?",
+     "answer": "-eria",
+     "distractors": [
+      "-ero",
+      "-ismo",
+      "-itate"
+     ],
+     "note": "Paired with -ero for the person: lactero, a milkman.",
+     "parallels": {
+      "es": "lechería",
+      "fr": "laiterie",
+      "it": "latteria",
+      "pt": "leitaria"
+     }
+    },
+    {
+     "position": 5,
+     "bridge_text": "facer → disfacer",
+     "gloss_en": "to do → to undo",
+     "highlight": "dis-",
+     "prompt": "Which prefix reverses an action?",
+     "answer": "dis-",
+     "distractors": [
+      "re-",
+      "in-",
+      "pre-"
+     ],
+     "note": "Surfaces as des- in Spanish and Portuguese, dé- in French.",
+     "parallels": {
+      "es": "deshacer",
+      "fr": "défaire",
+      "it": "disfare",
+      "pt": "desfazer"
+     }
+    },
+    {
+     "position": 6,
+     "bridge_text": "biologia → biologista",
+     "gloss_en": "biology → biologist",
+     "highlight": "-ista",
+     "prompt": "Which suffix names the practitioner of an art or science?",
+     "answer": "-ista",
+     "distractors": [
+      "-ero",
+      "-itate",
+      "-abile"
+     ],
+     "note": "Freely productive: any field name takes it, so saxophone gives saxophonista.",
+     "parallels": {
+      "es": "biólogo",
+      "fr": "biologiste",
+      "it": "biologo",
+      "pt": "biólogo"
+     }
+    }
+   ]
+  }
+ ],
+ "source": "Gode & Blair, Interlingua: A Grammar of the International Language, 2nd ed. 1955 (cited by section; not reproduced)",
+ "stats": {
+  "patterns": 5,
+  "examples": 25,
+  "with_parallels": 25,
+  "parallel_rows": 100
+ }
+}

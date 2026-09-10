@@ -1,0 +1,2813 @@
+{
+ "description": "Curated Finnish–Estonian cognate pairs for experimental module",
+ "pairs": [
+  {
+   "fi": "aamu",
+   "et": "hommik",
+   "gloss_en": "morning",
+   "pos": "n"
+  },
+  {
+   "fi": "ahkera",
+   "et": "tubli",
+   "gloss_en": "diligent",
+   "pos": "adj"
+  },
+  {
+   "fi": "aika",
+   "et": "aeg",
+   "gloss_en": "time",
+   "pos": "n"
+  },
+  {
+   "fi": "aikaisin",
+   "et": "vara",
+   "gloss_en": "early",
+   "pos": "adv"
+  },
+  {
+   "fi": "aina",
+   "et": "alati",
+   "gloss_en": "always",
+   "pos": "adv"
+  },
+  {
+   "fi": "ajaa",
+   "et": "sõitma",
+   "gloss_en": "to drive",
+   "pos": "v"
+  },
+  {
+   "fi": "ajatella",
+   "et": "mõtlema",
+   "gloss_en": "to think",
+   "pos": "v"
+  },
+  {
+   "fi": "alas",
+   "et": "alla",
+   "gloss_en": "down",
+   "pos": "adv"
+  },
+  {
+   "fi": "alkaa",
+   "et": "algama",
+   "gloss_en": "to begin",
+   "pos": "v"
+  },
+  {
+   "fi": "antaa",
+   "et": "andma",
+   "gloss_en": "to give",
+   "pos": "v"
+  },
+  {
+   "fi": "apteekki",
+   "et": "apteek",
+   "gloss_en": "pharmacy",
+   "pos": "n"
+  },
+  {
+   "fi": "asua",
+   "et": "elama",
+   "gloss_en": "to live (reside)",
+   "pos": "v"
+  },
+  {
+   "fi": "aurinko",
+   "et": "päike",
+   "gloss_en": "sun",
+   "pos": "n"
+  },
+  {
+   "fi": "auto",
+   "et": "auto",
+   "gloss_en": "car",
+   "pos": "n"
+  },
+  {
+   "fi": "auttaa",
+   "et": "aitama",
+   "gloss_en": "to help",
+   "pos": "v"
+  },
+  {
+   "fi": "avain",
+   "et": "võti",
+   "gloss_en": "key",
+   "pos": "n"
+  },
+  {
+   "fi": "avata",
+   "et": "avama",
+   "gloss_en": "to open",
+   "pos": "v"
+  },
+  {
+   "fi": "aviomies",
+   "et": "abikaasa",
+   "gloss_en": "husband",
+   "pos": "n"
+  },
+  {
+   "fi": "edessä",
+   "et": "ees",
+   "gloss_en": "in front",
+   "pos": "adv"
+  },
+  {
+   "fi": "ehkä",
+   "et": "ehk",
+   "gloss_en": "maybe",
+   "pos": "adv"
+  },
+  {
+   "fi": "ei",
+   "et": "ei",
+   "gloss_en": "not (negation verb)",
+   "pos": "v"
+  },
+  {
+   "fi": "eilen",
+   "et": "eile",
+   "gloss_en": "yesterday",
+   "pos": "adv"
+  },
+  {
+   "fi": "elokuva",
+   "et": "film",
+   "gloss_en": "film",
+   "pos": "n"
+  },
+  {
+   "fi": "elää",
+   "et": "elama",
+   "gloss_en": "to live (be alive)",
+   "pos": "v"
+  },
+  {
+   "fi": "energia",
+   "et": "energia",
+   "gloss_en": "energy",
+   "pos": "n"
+  },
+  {
+   "fi": "ennen",
+   "et": "enne",
+   "gloss_en": "before",
+   "pos": "prep"
+  },
+  {
+   "fi": "ensimmäinen",
+   "et": "esimene",
+   "gloss_en": "first",
+   "pos": "adj"
+  },
+  {
+   "fi": "epävirallinen",
+   "et": "mitteametlik",
+   "gloss_en": "unofficial",
+   "pos": "adj"
+  },
+  {
+   "fi": "eri",
+   "et": "eri",
+   "gloss_en": "different",
+   "pos": "adj"
+  },
+  {
+   "fi": "erityinen",
+   "et": "eriline",
+   "gloss_en": "special",
+   "pos": "adj"
+  },
+  {
+   "fi": "etsiä",
+   "et": "otsima",
+   "gloss_en": "to seek",
+   "pos": "v"
+  },
+  {
+   "fi": "että",
+   "et": "et",
+   "gloss_en": "that (complementizer)",
+   "pos": "conj"
+  },
+  {
+   "fi": "halpa",
+   "et": "odav",
+   "gloss_en": "cheap",
+   "pos": "adj"
+  },
+  {
+   "fi": "haluta",
+   "et": "tahtma",
+   "gloss_en": "to want",
+   "pos": "v"
+  },
+  {
+   "fi": "hammas",
+   "et": "hammas",
+   "gloss_en": "tooth",
+   "pos": "n"
+  },
+  {
+   "fi": "hapan",
+   "et": "hapu",
+   "gloss_en": "sour",
+   "pos": "adj"
+  },
+  {
+   "fi": "harmaa",
+   "et": "hall",
+   "gloss_en": "grey",
+   "pos": "adj"
+  },
+  {
+   "fi": "harvoin",
+   "et": "harva",
+   "gloss_en": "rarely",
+   "pos": "adv"
+  },
+  {
+   "fi": "hattu",
+   "et": "müts",
+   "gloss_en": "hat",
+   "pos": "n"
+  },
+  {
+   "fi": "hauska",
+   "et": "lõbus",
+   "gloss_en": "fun / funny",
+   "pos": "adj"
+  },
+  {
+   "fi": "he",
+   "et": "nad",
+   "gloss_en": "they",
+   "pos": "pron"
+  },
+  {
+   "fi": "heikko",
+   "et": "nõrk",
+   "gloss_en": "weak",
+   "pos": "adj"
+  },
+  {
+   "fi": "helppo",
+   "et": "kerge",
+   "gloss_en": "easy",
+   "pos": "adj"
+  },
+  {
+   "fi": "herätä",
+   "et": "ärkama",
+   "gloss_en": "to wake up",
+   "pos": "v"
+  },
+  {
+   "fi": "heti",
+   "et": "kohe",
+   "gloss_en": "immediately",
+   "pos": "adv"
+  },
+  {
+   "fi": "hevonen",
+   "et": "hobune",
+   "gloss_en": "horse",
+   "pos": "n"
+  },
+  {
+   "fi": "hidas",
+   "et": "aeglane",
+   "gloss_en": "slow",
+   "pos": "adj"
+  },
+  {
+   "fi": "hiekka",
+   "et": "liiv",
+   "gloss_en": "sand",
+   "pos": "n"
+  },
+  {
+   "fi": "hiljainen",
+   "et": "vaikne",
+   "gloss_en": "quiet",
+   "pos": "adj"
+  },
+  {
+   "fi": "hinta",
+   "et": "hind",
+   "gloss_en": "price",
+   "pos": "n"
+  },
+  {
+   "fi": "hitaasti",
+   "et": "aeglaselt",
+   "gloss_en": "slowly",
+   "pos": "adv"
+  },
+  {
+   "fi": "hius",
+   "et": "juuksed",
+   "gloss_en": "hair (strand)",
+   "pos": "n"
+  },
+  {
+   "fi": "hotelli",
+   "et": "hotell",
+   "gloss_en": "hotel",
+   "pos": "n"
+  },
+  {
+   "fi": "housut",
+   "et": "püksid",
+   "gloss_en": "trousers",
+   "pos": "n"
+  },
+  {
+   "fi": "huomenna",
+   "et": "homme",
+   "gloss_en": "tomorrow",
+   "pos": "adv"
+  },
+  {
+   "fi": "huone",
+   "et": "tuba",
+   "gloss_en": "room",
+   "pos": "n"
+  },
+  {
+   "fi": "huonosti",
+   "et": "halvasti",
+   "gloss_en": "badly",
+   "pos": "adv"
+  },
+  {
+   "fi": "hyvin",
+   "et": "hästi",
+   "gloss_en": "well",
+   "pos": "adv"
+  },
+  {
+   "fi": "hyvä",
+   "et": "hea",
+   "gloss_en": "good",
+   "pos": "adj"
+  },
+  {
+   "fi": "hän",
+   "et": "tema",
+   "gloss_en": "he / she",
+   "pos": "pron"
+  },
+  {
+   "fi": "häät",
+   "et": "pulm",
+   "gloss_en": "wedding",
+   "pos": "n"
+  },
+  {
+   "fi": "idea",
+   "et": "idee",
+   "gloss_en": "idea",
+   "pos": "n"
+  },
+  {
+   "fi": "ikkuna",
+   "et": "aken",
+   "gloss_en": "window",
+   "pos": "n"
+  },
+  {
+   "fi": "ilma",
+   "et": "õhk",
+   "gloss_en": "air / weather",
+   "pos": "n"
+  },
+  {
+   "fi": "ilo",
+   "et": "rõõm",
+   "gloss_en": "joy",
+   "pos": "n"
+  },
+  {
+   "fi": "ilta",
+   "et": "õhtu",
+   "gloss_en": "evening",
+   "pos": "n"
+  },
+  {
+   "fi": "internet",
+   "et": "internet",
+   "gloss_en": "internet",
+   "pos": "n"
+  },
+  {
+   "fi": "iso",
+   "et": "suur",
+   "gloss_en": "big",
+   "pos": "adj"
+  },
+  {
+   "fi": "istua",
+   "et": "istuma",
+   "gloss_en": "to sit",
+   "pos": "v"
+  },
+  {
+   "fi": "isä",
+   "et": "isa",
+   "gloss_en": "father",
+   "pos": "n"
+  },
+  {
+   "fi": "itkeä",
+   "et": "nutma",
+   "gloss_en": "to cry",
+   "pos": "v"
+  },
+  {
+   "fi": "itse",
+   "et": "ise",
+   "gloss_en": "self",
+   "pos": "pron"
+  },
+  {
+   "fi": "ja",
+   "et": "ja",
+   "gloss_en": "and",
+   "pos": "conj"
+  },
+  {
+   "fi": "jalka",
+   "et": "jalg",
+   "gloss_en": "foot / leg",
+   "pos": "n"
+  },
+  {
+   "fi": "janoinen",
+   "et": "janune",
+   "gloss_en": "thirsty",
+   "pos": "adj"
+  },
+  {
+   "fi": "jo",
+   "et": "juba",
+   "gloss_en": "already",
+   "pos": "adv"
+  },
+  {
+   "fi": "joki",
+   "et": "jõgi",
+   "gloss_en": "river",
+   "pos": "n"
+  },
+  {
+   "fi": "jos",
+   "et": "kui",
+   "gloss_en": "if",
+   "pos": "conj"
+  },
+  {
+   "fi": "joskus",
+   "et": "mõnikord",
+   "gloss_en": "sometimes",
+   "pos": "adv"
+  },
+  {
+   "fi": "julkinen",
+   "et": "avalik",
+   "gloss_en": "public",
+   "pos": "adj"
+  },
+  {
+   "fi": "juna",
+   "et": "rong",
+   "gloss_en": "train",
+   "pos": "n"
+  },
+  {
+   "fi": "juoda",
+   "et": "jooma",
+   "gloss_en": "to drink",
+   "pos": "v"
+  },
+  {
+   "fi": "juosta",
+   "et": "jooksma",
+   "gloss_en": "to run",
+   "pos": "v"
+  },
+  {
+   "fi": "juuri",
+   "et": "just",
+   "gloss_en": "just / exactly",
+   "pos": "adv"
+  },
+  {
+   "fi": "järki",
+   "et": "mõistus",
+   "gloss_en": "reason / sense",
+   "pos": "n"
+  },
+  {
+   "fi": "järvi",
+   "et": "järv",
+   "gloss_en": "lake",
+   "pos": "n"
+  },
+  {
+   "fi": "jättää",
+   "et": "jätma",
+   "gloss_en": "to leave (behind)",
+   "pos": "v"
+  },
+  {
+   "fi": "jäädä",
+   "et": "jääma",
+   "gloss_en": "to stay / remain",
+   "pos": "v"
+  },
+  {
+   "fi": "kaasu",
+   "et": "gaas",
+   "gloss_en": "gas",
+   "pos": "n"
+  },
+  {
+   "fi": "kahdeksan",
+   "et": "kaheksa",
+   "gloss_en": "eight",
+   "pos": "num"
+  },
+  {
+   "fi": "kahvi",
+   "et": "kohv",
+   "gloss_en": "coffee",
+   "pos": "n"
+  },
+  {
+   "fi": "kahvila",
+   "et": "kohvik",
+   "gloss_en": "café",
+   "pos": "n"
+  },
+  {
+   "fi": "kaikki",
+   "et": "kõik",
+   "gloss_en": "all / everything",
+   "pos": "pron"
+  },
+  {
+   "fi": "kaksi",
+   "et": "kaks",
+   "gloss_en": "two",
+   "pos": "num"
+  },
+  {
+   "fi": "kala",
+   "et": "kala",
+   "gloss_en": "fish",
+   "pos": "n"
+  },
+  {
+   "fi": "kallis",
+   "et": "kallis",
+   "gloss_en": "expensive",
+   "pos": "adj"
+  },
+  {
+   "fi": "kansainvälinen",
+   "et": "rahvusvaheline",
+   "gloss_en": "international",
+   "pos": "adj"
+  },
+  {
+   "fi": "kansallinen",
+   "et": "rahvuslik",
+   "gloss_en": "national",
+   "pos": "adj"
+  },
+  {
+   "fi": "kanssa",
+   "et": "koos",
+   "gloss_en": "with",
+   "pos": "prep"
+  },
+  {
+   "fi": "kartta",
+   "et": "kaart",
+   "gloss_en": "map",
+   "pos": "n"
+  },
+  {
+   "fi": "karvas",
+   "et": "mõru",
+   "gloss_en": "bitter",
+   "pos": "adj"
+  },
+  {
+   "fi": "katsoa",
+   "et": "vaatama",
+   "gloss_en": "to look / watch",
+   "pos": "v"
+  },
+  {
+   "fi": "katto",
+   "et": "lagi",
+   "gloss_en": "ceiling / roof",
+   "pos": "n"
+  },
+  {
+   "fi": "katu",
+   "et": "tänav",
+   "gloss_en": "street",
+   "pos": "n"
+  },
+  {
+   "fi": "kaunis",
+   "et": "ilus",
+   "gloss_en": "beautiful",
+   "pos": "adj"
+  },
+  {
+   "fi": "kauppa",
+   "et": "pood",
+   "gloss_en": "shop",
+   "pos": "n"
+  },
+  {
+   "fi": "kaupunki",
+   "et": "linn",
+   "gloss_en": "city",
+   "pos": "n"
+  },
+  {
+   "fi": "keittiö",
+   "et": "köök",
+   "gloss_en": "kitchen",
+   "pos": "n"
+  },
+  {
+   "fi": "keltainen",
+   "et": "kollane",
+   "gloss_en": "yellow",
+   "pos": "adj"
+  },
+  {
+   "fi": "kenkä",
+   "et": "king",
+   "gloss_en": "shoe",
+   "pos": "n"
+  },
+  {
+   "fi": "kerta",
+   "et": "kord",
+   "gloss_en": "time (occasion)",
+   "pos": "n"
+  },
+  {
+   "fi": "keskiviikko",
+   "et": "kolmapäev",
+   "gloss_en": "Wednesday",
+   "pos": "n"
+  },
+  {
+   "fi": "kesä",
+   "et": "suvi",
+   "gloss_en": "summer",
+   "pos": "n"
+  },
+  {
+   "fi": "kevät",
+   "et": "kevad",
+   "gloss_en": "spring",
+   "pos": "n"
+  },
+  {
+   "fi": "kieli",
+   "et": "keel",
+   "gloss_en": "language / tongue",
+   "pos": "n"
+  },
+  {
+   "fi": "kiertää",
+   "et": "keerama",
+   "gloss_en": "to circle / tour",
+   "pos": "v"
+  },
+  {
+   "fi": "kiinnostava",
+   "et": "huvitav",
+   "gloss_en": "interesting",
+   "pos": "adj"
+  },
+  {
+   "fi": "kiireinen",
+   "et": "hõivatud",
+   "gloss_en": "busy",
+   "pos": "adj"
+  },
+  {
+   "fi": "kiitos",
+   "et": "aitäh",
+   "gloss_en": "thank you / thanks",
+   "pos": "n"
+  },
+  {
+   "fi": "kipu",
+   "et": "valu",
+   "gloss_en": "pain",
+   "pos": "n"
+  },
+  {
+   "fi": "kirja",
+   "et": "raamat",
+   "gloss_en": "book",
+   "pos": "n"
+  },
+  {
+   "fi": "kirjasto",
+   "et": "raamatukogu",
+   "gloss_en": "library",
+   "pos": "n"
+  },
+  {
+   "fi": "kirje",
+   "et": "kiri",
+   "gloss_en": "letter",
+   "pos": "n"
+  },
+  {
+   "fi": "kirjoittaa",
+   "et": "kirjutama",
+   "gloss_en": "to write",
+   "pos": "v"
+  },
+  {
+   "fi": "kirkas",
+   "et": "hele",
+   "gloss_en": "bright / clear",
+   "pos": "adj"
+  },
+  {
+   "fi": "kirkko",
+   "et": "kirik",
+   "gloss_en": "church",
+   "pos": "n"
+  },
+  {
+   "fi": "kissa",
+   "et": "kass",
+   "gloss_en": "cat",
+   "pos": "n"
+  },
+  {
+   "fi": "kivi",
+   "et": "kivi",
+   "gloss_en": "stone",
+   "pos": "n"
+  },
+  {
+   "fi": "kohtelias",
+   "et": "viisakas",
+   "gloss_en": "polite",
+   "pos": "adj"
+  },
+  {
+   "fi": "koira",
+   "et": "koer",
+   "gloss_en": "dog",
+   "pos": "n"
+  },
+  {
+   "fi": "kolme",
+   "et": "kolm",
+   "gloss_en": "three",
+   "pos": "num"
+  },
+  {
+   "fi": "koska",
+   "et": "sest",
+   "gloss_en": "because",
+   "pos": "conj"
+  },
+  {
+   "fi": "koskaan",
+   "et": "kunagi",
+   "gloss_en": "ever / never (with ei)",
+   "pos": "adv"
+  },
+  {
+   "fi": "kota",
+   "et": "koda",
+   "gloss_en": "hut",
+   "pos": "n"
+  },
+  {
+   "fi": "koti",
+   "et": "kodu",
+   "gloss_en": "home",
+   "pos": "n"
+  },
+  {
+   "fi": "koulu",
+   "et": "kool",
+   "gloss_en": "school",
+   "pos": "n"
+  },
+  {
+   "fi": "kova",
+   "et": "kõva",
+   "gloss_en": "hard",
+   "pos": "adj"
+  },
+  {
+   "fi": "kuiva",
+   "et": "kuiv",
+   "gloss_en": "dry",
+   "pos": "adj"
+  },
+  {
+   "fi": "kuka",
+   "et": "kes",
+   "gloss_en": "who",
+   "pos": "pron"
+  },
+  {
+   "fi": "kukka",
+   "et": "lill",
+   "gloss_en": "flower",
+   "pos": "n"
+  },
+  {
+   "fi": "kun",
+   "et": "kui",
+   "gloss_en": "when / as",
+   "pos": "conj"
+  },
+  {
+   "fi": "kuolla",
+   "et": "surema",
+   "gloss_en": "to die",
+   "pos": "v"
+  },
+  {
+   "fi": "kuu",
+   "et": "kuu",
+   "gloss_en": "moon",
+   "pos": "n"
+  },
+  {
+   "fi": "kuukausi",
+   "et": "kuu",
+   "gloss_en": "month",
+   "pos": "n"
+  },
+  {
+   "fi": "kuulla",
+   "et": "kuulma",
+   "gloss_en": "to hear",
+   "pos": "v"
+  },
+  {
+   "fi": "kuulua",
+   "et": "kuuluma",
+   "gloss_en": "to belong / be heard",
+   "pos": "v"
+  },
+  {
+   "fi": "kuuma",
+   "et": "kuum",
+   "gloss_en": "hot",
+   "pos": "adj"
+  },
+  {
+   "fi": "kuusi",
+   "et": "kuus",
+   "gloss_en": "six",
+   "pos": "num"
+  },
+  {
+   "fi": "kyllä",
+   "et": "küll",
+   "gloss_en": "yes / indeed",
+   "pos": "adv"
+  },
+  {
+   "fi": "kylmä",
+   "et": "külm",
+   "gloss_en": "cold",
+   "pos": "adj"
+  },
+  {
+   "fi": "kylpyhuone",
+   "et": "vannituba",
+   "gloss_en": "bathroom",
+   "pos": "n"
+  },
+  {
+   "fi": "kylä",
+   "et": "küla",
+   "gloss_en": "village",
+   "pos": "n"
+  },
+  {
+   "fi": "kymmenen",
+   "et": "kümme",
+   "gloss_en": "ten",
+   "pos": "num"
+  },
+  {
+   "fi": "kysymys",
+   "et": "küsimus",
+   "gloss_en": "question",
+   "pos": "n"
+  },
+  {
+   "fi": "kysyä",
+   "et": "küsima",
+   "gloss_en": "to ask",
+   "pos": "v"
+  },
+  {
+   "fi": "käsi",
+   "et": "käsi",
+   "gloss_en": "hand",
+   "pos": "n"
+  },
+  {
+   "fi": "kävellä",
+   "et": "kõndima",
+   "gloss_en": "to walk",
+   "pos": "v"
+  },
+  {
+   "fi": "käyttää",
+   "et": "kasutama",
+   "gloss_en": "to use",
+   "pos": "v"
+  },
+  {
+   "fi": "käytännöllinen",
+   "et": "praktiline",
+   "gloss_en": "practical",
+   "pos": "adj"
+  },
+  {
+   "fi": "köyhä",
+   "et": "vaene",
+   "gloss_en": "poor",
+   "pos": "adj"
+  },
+  {
+   "fi": "laiska",
+   "et": "laisk",
+   "gloss_en": "lazy",
+   "pos": "adj"
+  },
+  {
+   "fi": "laittaa",
+   "et": "panema",
+   "gloss_en": "to put / prepare",
+   "pos": "v"
+  },
+  {
+   "fi": "laiva",
+   "et": "laev",
+   "gloss_en": "ship",
+   "pos": "n"
+  },
+  {
+   "fi": "laki",
+   "et": "seadus",
+   "gloss_en": "law",
+   "pos": "n"
+  },
+  {
+   "fi": "lapsi",
+   "et": "laps",
+   "gloss_en": "child",
+   "pos": "n"
+  },
+  {
+   "fi": "laskea",
+   "et": "langema",
+   "gloss_en": "to lower / count",
+   "pos": "v"
+  },
+  {
+   "fi": "lattia",
+   "et": "põrand",
+   "gloss_en": "floor",
+   "pos": "n"
+  },
+  {
+   "fi": "lauantai",
+   "et": "laupäev",
+   "gloss_en": "Saturday",
+   "pos": "n"
+  },
+  {
+   "fi": "laukku",
+   "et": "kott",
+   "gloss_en": "bag",
+   "pos": "n"
+  },
+  {
+   "fi": "laulaa",
+   "et": "laulma",
+   "gloss_en": "to sing",
+   "pos": "v"
+  },
+  {
+   "fi": "laulu",
+   "et": "laul",
+   "gloss_en": "song",
+   "pos": "n"
+  },
+  {
+   "fi": "lehti",
+   "et": "leht",
+   "gloss_en": "leaf / newspaper",
+   "pos": "n"
+  },
+  {
+   "fi": "leipä",
+   "et": "leib",
+   "gloss_en": "bread",
+   "pos": "n"
+  },
+  {
+   "fi": "lentokone",
+   "et": "lennuk",
+   "gloss_en": "airplane",
+   "pos": "n"
+  },
+  {
+   "fi": "liha",
+   "et": "liha",
+   "gloss_en": "meat",
+   "pos": "n"
+  },
+  {
+   "fi": "lihas",
+   "et": "lihas",
+   "gloss_en": "muscle",
+   "pos": "n"
+  },
+  {
+   "fi": "lika",
+   "et": "mustus",
+   "gloss_en": "dirt",
+   "pos": "n"
+  },
+  {
+   "fi": "likainen",
+   "et": "must",
+   "gloss_en": "dirty",
+   "pos": "adj"
+  },
+  {
+   "fi": "lintu",
+   "et": "lind",
+   "gloss_en": "bird",
+   "pos": "n"
+  },
+  {
+   "fi": "lippu",
+   "et": "pilet",
+   "gloss_en": "ticket / flag",
+   "pos": "n"
+  },
+  {
+   "fi": "lompakko",
+   "et": "rahakott",
+   "gloss_en": "wallet",
+   "pos": "n"
+  },
+  {
+   "fi": "lopettaa",
+   "et": "lõpetama",
+   "gloss_en": "to finish / stop",
+   "pos": "v"
+  },
+  {
+   "fi": "lukea",
+   "et": "lugema",
+   "gloss_en": "to read",
+   "pos": "v"
+  },
+  {
+   "fi": "luku",
+   "et": "peatükk",
+   "gloss_en": "number / chapter",
+   "pos": "n"
+  },
+  {
+   "fi": "lumi",
+   "et": "lumi",
+   "gloss_en": "snow",
+   "pos": "n"
+  },
+  {
+   "fi": "luoda",
+   "et": "looma",
+   "gloss_en": "to create",
+   "pos": "v"
+  },
+  {
+   "fi": "luova",
+   "et": "loov",
+   "gloss_en": "creative",
+   "pos": "adj"
+  },
+  {
+   "fi": "luu",
+   "et": "luu",
+   "gloss_en": "bone",
+   "pos": "n"
+  },
+  {
+   "fi": "lyhyt",
+   "et": "lühike",
+   "gloss_en": "short",
+   "pos": "adj"
+  },
+  {
+   "fi": "lämmin",
+   "et": "soe",
+   "gloss_en": "warm",
+   "pos": "adj"
+  },
+  {
+   "fi": "lääke",
+   "et": "ravim",
+   "gloss_en": "medicine",
+   "pos": "n"
+  },
+  {
+   "fi": "lääkäri",
+   "et": "arst",
+   "gloss_en": "doctor",
+   "pos": "n"
+  },
+  {
+   "fi": "löytää",
+   "et": "leidma",
+   "gloss_en": "to find",
+   "pos": "v"
+  },
+  {
+   "fi": "maa",
+   "et": "maa",
+   "gloss_en": "land / country / earth",
+   "pos": "n"
+  },
+  {
+   "fi": "maanantai",
+   "et": "esmaspäev",
+   "gloss_en": "Monday",
+   "pos": "n"
+  },
+  {
+   "fi": "maata",
+   "et": "lamama",
+   "gloss_en": "to lie (down)",
+   "pos": "v"
+  },
+  {
+   "fi": "mahdollinen",
+   "et": "võimalik",
+   "gloss_en": "possible",
+   "pos": "adj"
+  },
+  {
+   "fi": "maito",
+   "et": "piim",
+   "gloss_en": "milk",
+   "pos": "n"
+  },
+  {
+   "fi": "makea",
+   "et": "magus",
+   "gloss_en": "sweet",
+   "pos": "adj"
+  },
+  {
+   "fi": "maksaa",
+   "et": "maksma",
+   "gloss_en": "to pay / cost",
+   "pos": "v"
+  },
+  {
+   "fi": "markkinat",
+   "et": "turg",
+   "gloss_en": "market",
+   "pos": "n"
+  },
+  {
+   "fi": "mato",
+   "et": "uss",
+   "gloss_en": "worm",
+   "pos": "n"
+  },
+  {
+   "fi": "matto",
+   "et": "vaip",
+   "gloss_en": "carpet / mat",
+   "pos": "n"
+  },
+  {
+   "fi": "me",
+   "et": "meie",
+   "gloss_en": "we",
+   "pos": "pron"
+  },
+  {
+   "fi": "mennä",
+   "et": "minema",
+   "gloss_en": "to go",
+   "pos": "v"
+  },
+  {
+   "fi": "meri",
+   "et": "meri",
+   "gloss_en": "sea",
+   "pos": "n"
+  },
+  {
+   "fi": "metalli",
+   "et": "metall",
+   "gloss_en": "metal",
+   "pos": "n"
+  },
+  {
+   "fi": "metsä",
+   "et": "mets",
+   "gloss_en": "forest",
+   "pos": "n"
+  },
+  {
+   "fi": "mies",
+   "et": "mees",
+   "gloss_en": "man",
+   "pos": "n"
+  },
+  {
+   "fi": "miksi",
+   "et": "miks",
+   "gloss_en": "why",
+   "pos": "adv"
+  },
+  {
+   "fi": "mikä",
+   "et": "mis",
+   "gloss_en": "what / which",
+   "pos": "pron"
+  },
+  {
+   "fi": "minne",
+   "et": "kuhu",
+   "gloss_en": "where (to)",
+   "pos": "adv"
+  },
+  {
+   "fi": "minuutti",
+   "et": "minut",
+   "gloss_en": "minute",
+   "pos": "n"
+  },
+  {
+   "fi": "minä",
+   "et": "mina",
+   "gloss_en": "I",
+   "pos": "pron"
+  },
+  {
+   "fi": "missä",
+   "et": "kus",
+   "gloss_en": "where (at)",
+   "pos": "adv"
+  },
+  {
+   "fi": "mistä",
+   "et": "kust",
+   "gloss_en": "where (from)",
+   "pos": "adv"
+  },
+  {
+   "fi": "miten",
+   "et": "kuidas",
+   "gloss_en": "how",
+   "pos": "adv"
+  },
+  {
+   "fi": "muistaa",
+   "et": "mäletama",
+   "gloss_en": "to remember",
+   "pos": "v"
+  },
+  {
+   "fi": "museo",
+   "et": "muuseum",
+   "gloss_en": "museum",
+   "pos": "n"
+  },
+  {
+   "fi": "musiikki",
+   "et": "muusika",
+   "gloss_en": "music",
+   "pos": "n"
+  },
+  {
+   "fi": "musta",
+   "et": "must",
+   "gloss_en": "black",
+   "pos": "adj"
+  },
+  {
+   "fi": "mutta",
+   "et": "aga",
+   "gloss_en": "but",
+   "pos": "conj"
+  },
+  {
+   "fi": "myydä",
+   "et": "müüma",
+   "gloss_en": "to sell",
+   "pos": "v"
+  },
+  {
+   "fi": "myöhään",
+   "et": "hilja",
+   "gloss_en": "late",
+   "pos": "adv"
+  },
+  {
+   "fi": "myös",
+   "et": "ka",
+   "gloss_en": "also",
+   "pos": "adv"
+  },
+  {
+   "fi": "mäki",
+   "et": "mägi",
+   "gloss_en": "hill",
+   "pos": "n"
+  },
+  {
+   "fi": "märkä",
+   "et": "märg",
+   "gloss_en": "wet",
+   "pos": "adj"
+  },
+  {
+   "fi": "nahka",
+   "et": "nahk",
+   "gloss_en": "skin / leather",
+   "pos": "n"
+  },
+  {
+   "fi": "nainen",
+   "et": "naine",
+   "gloss_en": "woman",
+   "pos": "n"
+  },
+  {
+   "fi": "nauraa",
+   "et": "naerma",
+   "gloss_en": "to laugh",
+   "pos": "v"
+  },
+  {
+   "fi": "neljä",
+   "et": "neli",
+   "gloss_en": "four",
+   "pos": "num"
+  },
+  {
+   "fi": "niin",
+   "et": "nii",
+   "gloss_en": "so / thus",
+   "pos": "adv"
+  },
+  {
+   "fi": "nimi",
+   "et": "nimi",
+   "gloss_en": "name",
+   "pos": "n"
+  },
+  {
+   "fi": "nopea",
+   "et": "kiire",
+   "gloss_en": "fast",
+   "pos": "adj"
+  },
+  {
+   "fi": "nopeasti",
+   "et": "kiiresti",
+   "gloss_en": "quickly",
+   "pos": "adv"
+  },
+  {
+   "fi": "normaali",
+   "et": "normaalne",
+   "gloss_en": "normal",
+   "pos": "adj"
+  },
+  {
+   "fi": "nousta",
+   "et": "tõusma",
+   "gloss_en": "to rise / get up",
+   "pos": "v"
+  },
+  {
+   "fi": "nukkua",
+   "et": "magama",
+   "gloss_en": "to sleep",
+   "pos": "v"
+  },
+  {
+   "fi": "numero",
+   "et": "number",
+   "gloss_en": "number",
+   "pos": "n"
+  },
+  {
+   "fi": "nuori",
+   "et": "noor",
+   "gloss_en": "young",
+   "pos": "adj"
+  },
+  {
+   "fi": "nyt",
+   "et": "nüüd",
+   "gloss_en": "now",
+   "pos": "adv"
+  },
+  {
+   "fi": "nähdä",
+   "et": "nägema",
+   "gloss_en": "to see",
+   "pos": "v"
+  },
+  {
+   "fi": "näkyä",
+   "et": "näima",
+   "gloss_en": "to be visible",
+   "pos": "v"
+  },
+  {
+   "fi": "nälkäinen",
+   "et": "näljane",
+   "gloss_en": "hungry",
+   "pos": "adj"
+  },
+  {
+   "fi": "näyttää",
+   "et": "näitama",
+   "gloss_en": "to show",
+   "pos": "v"
+  },
+  {
+   "fi": "odottaa",
+   "et": "ootama",
+   "gloss_en": "to wait",
+   "pos": "v"
+  },
+  {
+   "fi": "oikea",
+   "et": "õige",
+   "gloss_en": "right / correct",
+   "pos": "adj"
+  },
+  {
+   "fi": "olla",
+   "et": "olema",
+   "gloss_en": "to be",
+   "pos": "v"
+  },
+  {
+   "fi": "olut",
+   "et": "õlu",
+   "gloss_en": "beer",
+   "pos": "n"
+  },
+  {
+   "fi": "omena",
+   "et": "õun",
+   "gloss_en": "apple",
+   "pos": "n"
+  },
+  {
+   "fi": "ongelma",
+   "et": "probleem",
+   "gloss_en": "problem",
+   "pos": "n"
+  },
+  {
+   "fi": "onnellinen",
+   "et": "õnnelik",
+   "gloss_en": "happy",
+   "pos": "adj"
+  },
+  {
+   "fi": "onni",
+   "et": "õnn",
+   "gloss_en": "luck / happiness",
+   "pos": "n"
+  },
+  {
+   "fi": "opettaa",
+   "et": "õpetama",
+   "gloss_en": "to teach",
+   "pos": "v"
+  },
+  {
+   "fi": "opettaja",
+   "et": "õpetaja",
+   "gloss_en": "teacher",
+   "pos": "n"
+  },
+  {
+   "fi": "opiskelija",
+   "et": "õpilane",
+   "gloss_en": "student",
+   "pos": "n"
+  },
+  {
+   "fi": "oppia",
+   "et": "õppima",
+   "gloss_en": "to learn",
+   "pos": "v"
+  },
+  {
+   "fi": "osoite",
+   "et": "aadress",
+   "gloss_en": "address",
+   "pos": "n"
+  },
+  {
+   "fi": "ostaa",
+   "et": "ostma",
+   "gloss_en": "to buy",
+   "pos": "v"
+  },
+  {
+   "fi": "ottaa",
+   "et": "võtma",
+   "gloss_en": "to take",
+   "pos": "v"
+  },
+  {
+   "fi": "outo",
+   "et": "veider",
+   "gloss_en": "strange",
+   "pos": "adj"
+  },
+  {
+   "fi": "ovi",
+   "et": "uks",
+   "gloss_en": "door",
+   "pos": "n"
+  },
+  {
+   "fi": "paikallinen",
+   "et": "kohalik",
+   "gloss_en": "local",
+   "pos": "adj"
+  },
+  {
+   "fi": "paita",
+   "et": "särk",
+   "gloss_en": "shirt",
+   "pos": "n"
+  },
+  {
+   "fi": "paljon",
+   "et": "palju",
+   "gloss_en": "much / a lot",
+   "pos": "adv"
+  },
+  {
+   "fi": "pankki",
+   "et": "pank",
+   "gloss_en": "bank",
+   "pos": "n"
+  },
+  {
+   "fi": "panna",
+   "et": "panema",
+   "gloss_en": "to put",
+   "pos": "v"
+  },
+  {
+   "fi": "parta",
+   "et": "habe",
+   "gloss_en": "beard",
+   "pos": "n"
+  },
+  {
+   "fi": "pata",
+   "et": "pada",
+   "gloss_en": "pot",
+   "pos": "n"
+  },
+  {
+   "fi": "pehmeä",
+   "et": "pehme",
+   "gloss_en": "soft",
+   "pos": "adj"
+  },
+  {
+   "fi": "pelata",
+   "et": "mängima",
+   "gloss_en": "to play (a game)",
+   "pos": "v"
+  },
+  {
+   "fi": "peli",
+   "et": "mäng",
+   "gloss_en": "game",
+   "pos": "n"
+  },
+  {
+   "fi": "pelko",
+   "et": "hirm",
+   "gloss_en": "fear",
+   "pos": "n"
+  },
+  {
+   "fi": "pelätä",
+   "et": "kartma",
+   "gloss_en": "to fear",
+   "pos": "v"
+  },
+  {
+   "fi": "perhe",
+   "et": "pere",
+   "gloss_en": "family",
+   "pos": "n"
+  },
+  {
+   "fi": "perjantai",
+   "et": "reede",
+   "gloss_en": "Friday",
+   "pos": "n"
+  },
+  {
+   "fi": "pian",
+   "et": "varsti",
+   "gloss_en": "soon",
+   "pos": "adv"
+  },
+  {
+   "fi": "pieni",
+   "et": "väike",
+   "gloss_en": "small",
+   "pos": "adj"
+  },
+  {
+   "fi": "piha",
+   "et": "õu",
+   "gloss_en": "yard",
+   "pos": "n"
+  },
+  {
+   "fi": "piirtää",
+   "et": "joonistama",
+   "gloss_en": "to draw",
+   "pos": "v"
+  },
+  {
+   "fi": "pilaantunut",
+   "et": "riknenud",
+   "gloss_en": "spoiled",
+   "pos": "adj"
+  },
+  {
+   "fi": "pimeä",
+   "et": "pime",
+   "gloss_en": "dark",
+   "pos": "adj"
+  },
+  {
+   "fi": "pitkä",
+   "et": "pikk",
+   "gloss_en": "long / tall",
+   "pos": "adj"
+  },
+  {
+   "fi": "pitää",
+   "et": "pidama",
+   "gloss_en": "to like / hold / must",
+   "pos": "v"
+  },
+  {
+   "fi": "poika",
+   "et": "poiss",
+   "gloss_en": "boy / son",
+   "pos": "n"
+  },
+  {
+   "fi": "pois",
+   "et": "ära",
+   "gloss_en": "away",
+   "pos": "adv"
+  },
+  {
+   "fi": "poliisi",
+   "et": "politsei",
+   "gloss_en": "police",
+   "pos": "n"
+  },
+  {
+   "fi": "posti",
+   "et": "post",
+   "gloss_en": "post / mail",
+   "pos": "n"
+  },
+  {
+   "fi": "puhdas",
+   "et": "puhas",
+   "gloss_en": "clean",
+   "pos": "adj"
+  },
+  {
+   "fi": "puhelin",
+   "et": "telefon",
+   "gloss_en": "telephone",
+   "pos": "n"
+  },
+  {
+   "fi": "puhua",
+   "et": "rääkima",
+   "gloss_en": "to speak",
+   "pos": "v"
+  },
+  {
+   "fi": "puku",
+   "et": "ülikond",
+   "gloss_en": "suit / costume",
+   "pos": "n"
+  },
+  {
+   "fi": "punainen",
+   "et": "punane",
+   "gloss_en": "red",
+   "pos": "adj"
+  },
+  {
+   "fi": "purra",
+   "et": "hammustama",
+   "gloss_en": "to bite",
+   "pos": "v"
+  },
+  {
+   "fi": "puu",
+   "et": "puu",
+   "gloss_en": "tree / wood",
+   "pos": "n"
+  },
+  {
+   "fi": "puutarha",
+   "et": "aed",
+   "gloss_en": "garden",
+   "pos": "n"
+  },
+  {
+   "fi": "päivä",
+   "et": "päev",
+   "gloss_en": "day",
+   "pos": "n"
+  },
+  {
+   "fi": "pää",
+   "et": "pea",
+   "gloss_en": "head",
+   "pos": "n"
+  },
+  {
+   "fi": "pöly",
+   "et": "tolm",
+   "gloss_en": "dust",
+   "pos": "n"
+  },
+  {
+   "fi": "pöytä",
+   "et": "laud",
+   "gloss_en": "table",
+   "pos": "n"
+  },
+  {
+   "fi": "raha",
+   "et": "raha",
+   "gloss_en": "money",
+   "pos": "n"
+  },
+  {
+   "fi": "rakas",
+   "et": "kallis",
+   "gloss_en": "dear / beloved",
+   "pos": "adj"
+  },
+  {
+   "fi": "rakastaa",
+   "et": "armastama",
+   "gloss_en": "to love",
+   "pos": "v"
+  },
+  {
+   "fi": "ranta",
+   "et": "rand",
+   "gloss_en": "shore / beach",
+   "pos": "n"
+  },
+  {
+   "fi": "ravintola",
+   "et": "restoran",
+   "gloss_en": "restaurant",
+   "pos": "n"
+  },
+  {
+   "fi": "rehellinen",
+   "et": "aus",
+   "gloss_en": "honest",
+   "pos": "adj"
+  },
+  {
+   "fi": "reki",
+   "et": "regi",
+   "gloss_en": "sledge",
+   "pos": "n"
+  },
+  {
+   "fi": "rikas",
+   "et": "rikas",
+   "gloss_en": "rich",
+   "pos": "adj"
+  },
+  {
+   "fi": "ruma",
+   "et": "kole",
+   "gloss_en": "ugly",
+   "pos": "adj"
+  },
+  {
+   "fi": "ruoka",
+   "et": "toit",
+   "gloss_en": "food",
+   "pos": "n"
+  },
+  {
+   "fi": "ruskea",
+   "et": "pruun",
+   "gloss_en": "brown",
+   "pos": "adj"
+  },
+  {
+   "fi": "saada",
+   "et": "saama",
+   "gloss_en": "to get / receive",
+   "pos": "v"
+  },
+  {
+   "fi": "saattaa",
+   "et": "saatma",
+   "gloss_en": "to escort / may",
+   "pos": "v"
+  },
+  {
+   "fi": "sade",
+   "et": "vihm",
+   "gloss_en": "rain",
+   "pos": "n"
+  },
+  {
+   "fi": "saippua",
+   "et": "seep",
+   "gloss_en": "soap",
+   "pos": "n"
+  },
+  {
+   "fi": "sairaala",
+   "et": "haigla",
+   "gloss_en": "hospital",
+   "pos": "n"
+  },
+  {
+   "fi": "sairas",
+   "et": "haige",
+   "gloss_en": "ill",
+   "pos": "adj"
+  },
+  {
+   "fi": "sairaus",
+   "et": "haigus",
+   "gloss_en": "illness",
+   "pos": "n"
+  },
+  {
+   "fi": "sama",
+   "et": "sama",
+   "gloss_en": "same",
+   "pos": "adj"
+  },
+  {
+   "fi": "sana",
+   "et": "sõna",
+   "gloss_en": "word",
+   "pos": "n"
+  },
+  {
+   "fi": "sanoa",
+   "et": "ütlema",
+   "gloss_en": "to say",
+   "pos": "v"
+  },
+  {
+   "fi": "sata",
+   "et": "sada",
+   "gloss_en": "hundred",
+   "pos": "num"
+  },
+  {
+   "fi": "satu",
+   "et": "muinasjutt",
+   "gloss_en": "fairy tale",
+   "pos": "n"
+  },
+  {
+   "fi": "se",
+   "et": "see",
+   "gloss_en": "it / that",
+   "pos": "pron"
+  },
+  {
+   "fi": "seinä",
+   "et": "sein",
+   "gloss_en": "wall",
+   "pos": "n"
+  },
+  {
+   "fi": "seistä",
+   "et": "seisma",
+   "gloss_en": "to stand",
+   "pos": "v"
+  },
+  {
+   "fi": "seitsemän",
+   "et": "seitse",
+   "gloss_en": "seven",
+   "pos": "num"
+  },
+  {
+   "fi": "siellä",
+   "et": "seal",
+   "gloss_en": "there",
+   "pos": "adv"
+  },
+  {
+   "fi": "silmä",
+   "et": "silm",
+   "gloss_en": "eye",
+   "pos": "n"
+  },
+  {
+   "fi": "sininen",
+   "et": "sinine",
+   "gloss_en": "blue",
+   "pos": "adj"
+  },
+  {
+   "fi": "sinne",
+   "et": "sinna",
+   "gloss_en": "to there",
+   "pos": "adv"
+  },
+  {
+   "fi": "sinä",
+   "et": "sina",
+   "gloss_en": "you (sg)",
+   "pos": "pron"
+  },
+  {
+   "fi": "sisar",
+   "et": "õde",
+   "gloss_en": "sister",
+   "pos": "n"
+  },
+  {
+   "fi": "sisään",
+   "et": "sisse",
+   "gloss_en": "in(to)",
+   "pos": "adv"
+  },
+  {
+   "fi": "sitten",
+   "et": "siis",
+   "gloss_en": "then",
+   "pos": "adv"
+  },
+  {
+   "fi": "sota",
+   "et": "sõda",
+   "gloss_en": "war",
+   "pos": "n"
+  },
+  {
+   "fi": "suksi",
+   "et": "suusk",
+   "gloss_en": "ski",
+   "pos": "n"
+  },
+  {
+   "fi": "suku",
+   "et": "suguvõsa",
+   "gloss_en": "family / kin",
+   "pos": "n"
+  },
+  {
+   "fi": "sulkea",
+   "et": "sulgema",
+   "gloss_en": "to close",
+   "pos": "v"
+  },
+  {
+   "fi": "sunnuntai",
+   "et": "pühapäev",
+   "gloss_en": "Sunday",
+   "pos": "n"
+  },
+  {
+   "fi": "suolainen",
+   "et": "soolane",
+   "gloss_en": "salty",
+   "pos": "adj"
+  },
+  {
+   "fi": "surra",
+   "et": "leinama",
+   "gloss_en": "to mourn",
+   "pos": "v"
+  },
+  {
+   "fi": "suru",
+   "et": "kurbus",
+   "gloss_en": "sorrow",
+   "pos": "n"
+  },
+  {
+   "fi": "surullinen",
+   "et": "kurb",
+   "gloss_en": "sad",
+   "pos": "adj"
+  },
+  {
+   "fi": "suu",
+   "et": "suu",
+   "gloss_en": "mouth",
+   "pos": "n"
+  },
+  {
+   "fi": "sydän",
+   "et": "süda",
+   "gloss_en": "heart",
+   "pos": "n"
+  },
+  {
+   "fi": "syksy",
+   "et": "sügis",
+   "gloss_en": "autumn",
+   "pos": "n"
+  },
+  {
+   "fi": "syödä",
+   "et": "sööma",
+   "gloss_en": "to eat",
+   "pos": "v"
+  },
+  {
+   "fi": "sähköposti",
+   "et": "e-kiri",
+   "gloss_en": "email",
+   "pos": "n"
+  },
+  {
+   "fi": "sänky",
+   "et": "voodi",
+   "gloss_en": "bed",
+   "pos": "n"
+  },
+  {
+   "fi": "sää",
+   "et": "ilm",
+   "gloss_en": "weather",
+   "pos": "n"
+  },
+  {
+   "fi": "taas",
+   "et": "jälle",
+   "gloss_en": "again",
+   "pos": "adv"
+  },
+  {
+   "fi": "tahto",
+   "et": "tahe",
+   "gloss_en": "will",
+   "pos": "n"
+  },
+  {
+   "fi": "tai",
+   "et": "või",
+   "gloss_en": "or",
+   "pos": "conj"
+  },
+  {
+   "fi": "takana",
+   "et": "taga",
+   "gloss_en": "behind",
+   "pos": "adv"
+  },
+  {
+   "fi": "takki",
+   "et": "mantel",
+   "gloss_en": "coat",
+   "pos": "n"
+  },
+  {
+   "fi": "talo",
+   "et": "maja",
+   "gloss_en": "house",
+   "pos": "n"
+  },
+  {
+   "fi": "talvi",
+   "et": "talv",
+   "gloss_en": "winter",
+   "pos": "n"
+  },
+  {
+   "fi": "tanssia",
+   "et": "tantsima",
+   "gloss_en": "to dance",
+   "pos": "v"
+  },
+  {
+   "fi": "tapahtua",
+   "et": "juhtuma",
+   "gloss_en": "to happen",
+   "pos": "v"
+  },
+  {
+   "fi": "tarina",
+   "et": "lugu",
+   "gloss_en": "story",
+   "pos": "n"
+  },
+  {
+   "fi": "tarjota",
+   "et": "pakkuma",
+   "gloss_en": "to offer",
+   "pos": "v"
+  },
+  {
+   "fi": "tarpeellinen",
+   "et": "vajalik",
+   "gloss_en": "necessary",
+   "pos": "adj"
+  },
+  {
+   "fi": "tarvita",
+   "et": "vajama",
+   "gloss_en": "to need",
+   "pos": "v"
+  },
+  {
+   "fi": "teatteri",
+   "et": "teater",
+   "gloss_en": "theatre",
+   "pos": "n"
+  },
+  {
+   "fi": "tee",
+   "et": "tee",
+   "gloss_en": "tea",
+   "pos": "n"
+  },
+  {
+   "fi": "tehdä",
+   "et": "tegema",
+   "gloss_en": "to do / make",
+   "pos": "v"
+  },
+  {
+   "fi": "teoreettinen",
+   "et": "teoreetiline",
+   "gloss_en": "theoretical",
+   "pos": "adj"
+  },
+  {
+   "fi": "terve",
+   "et": "terve",
+   "gloss_en": "healthy",
+   "pos": "adj"
+  },
+  {
+   "fi": "terveys",
+   "et": "tervis",
+   "gloss_en": "health",
+   "pos": "n"
+  },
+  {
+   "fi": "terävä",
+   "et": "terav",
+   "gloss_en": "sharp",
+   "pos": "adj"
+  },
+  {
+   "fi": "tie",
+   "et": "tee",
+   "gloss_en": "road",
+   "pos": "n"
+  },
+  {
+   "fi": "tieto",
+   "et": "teadmine",
+   "gloss_en": "knowledge / data",
+   "pos": "n"
+  },
+  {
+   "fi": "tietokone",
+   "et": "arvuti",
+   "gloss_en": "computer",
+   "pos": "n"
+  },
+  {
+   "fi": "tietää",
+   "et": "teadma",
+   "gloss_en": "to know",
+   "pos": "v"
+  },
+  {
+   "fi": "tiistai",
+   "et": "teisipäev",
+   "gloss_en": "Tuesday",
+   "pos": "n"
+  },
+  {
+   "fi": "todella",
+   "et": "tõesti",
+   "gloss_en": "really",
+   "pos": "adv"
+  },
+  {
+   "fi": "toinen",
+   "et": "teine",
+   "gloss_en": "second / other",
+   "pos": "adj"
+  },
+  {
+   "fi": "toivo",
+   "et": "lootus",
+   "gloss_en": "hope",
+   "pos": "n"
+  },
+  {
+   "fi": "torstai",
+   "et": "neljapäev",
+   "gloss_en": "Thursday",
+   "pos": "n"
+  },
+  {
+   "fi": "tuhat",
+   "et": "tuhat",
+   "gloss_en": "thousand",
+   "pos": "num"
+  },
+  {
+   "fi": "tuli",
+   "et": "tuli",
+   "gloss_en": "fire",
+   "pos": "n"
+  },
+  {
+   "fi": "tulla",
+   "et": "tulema",
+   "gloss_en": "to come",
+   "pos": "v"
+  },
+  {
+   "fi": "tuntea",
+   "et": "tundma",
+   "gloss_en": "to feel / know (a person)",
+   "pos": "v"
+  },
+  {
+   "fi": "tuntematon",
+   "et": "tundmatu",
+   "gloss_en": "unknown",
+   "pos": "adj"
+  },
+  {
+   "fi": "tunti",
+   "et": "tund",
+   "gloss_en": "hour",
+   "pos": "n"
+  },
+  {
+   "fi": "tuoda",
+   "et": "tooma",
+   "gloss_en": "to bring",
+   "pos": "v"
+  },
+  {
+   "fi": "tuoli",
+   "et": "tool",
+   "gloss_en": "chair",
+   "pos": "n"
+  },
+  {
+   "fi": "tuore",
+   "et": "värske",
+   "gloss_en": "fresh",
+   "pos": "adj"
+  },
+  {
+   "fi": "turvallinen",
+   "et": "turvaline",
+   "gloss_en": "safe",
+   "pos": "adj"
+  },
+  {
+   "fi": "tuttu",
+   "et": "tuttav",
+   "gloss_en": "familiar",
+   "pos": "adj"
+  },
+  {
+   "fi": "tutustua",
+   "et": "tutvuma",
+   "gloss_en": "to get acquainted",
+   "pos": "v"
+  },
+  {
+   "fi": "tuuli",
+   "et": "tuul",
+   "gloss_en": "wind",
+   "pos": "n"
+  },
+  {
+   "fi": "tyhjä",
+   "et": "tühi",
+   "gloss_en": "empty",
+   "pos": "adj"
+  },
+  {
+   "fi": "tyhmä",
+   "et": "loll",
+   "gloss_en": "stupid",
+   "pos": "adj"
+  },
+  {
+   "fi": "tylsä",
+   "et": "igav",
+   "gloss_en": "boring",
+   "pos": "adj"
+  },
+  {
+   "fi": "tyttö",
+   "et": "tüdruk",
+   "gloss_en": "girl",
+   "pos": "n"
+  },
+  {
+   "fi": "työ",
+   "et": "töö",
+   "gloss_en": "work",
+   "pos": "n"
+  },
+  {
+   "fi": "tähti",
+   "et": "täht",
+   "gloss_en": "star",
+   "pos": "n"
+  },
+  {
+   "fi": "tämä",
+   "et": "see",
+   "gloss_en": "this",
+   "pos": "pron"
+  },
+  {
+   "fi": "tänne",
+   "et": "siia",
+   "gloss_en": "to here",
+   "pos": "adv"
+  },
+  {
+   "fi": "tänään",
+   "et": "täna",
+   "gloss_en": "today",
+   "pos": "adv"
+  },
+  {
+   "fi": "tärkeä",
+   "et": "tähtis",
+   "gloss_en": "important",
+   "pos": "adj"
+  },
+  {
+   "fi": "täysi",
+   "et": "täis",
+   "gloss_en": "full",
+   "pos": "adj"
+  },
+  {
+   "fi": "täytyä",
+   "et": "pidama",
+   "gloss_en": "must / have to",
+   "pos": "v"
+  },
+  {
+   "fi": "täällä",
+   "et": "siin",
+   "gloss_en": "here",
+   "pos": "adv"
+  },
+  {
+   "fi": "ulos",
+   "et": "välja",
+   "gloss_en": "out",
+   "pos": "adv"
+  },
+  {
+   "fi": "unelma",
+   "et": "unistus",
+   "gloss_en": "dream (aspiration)",
+   "pos": "n"
+  },
+  {
+   "fi": "uni",
+   "et": "uni",
+   "gloss_en": "dream / sleep",
+   "pos": "n"
+  },
+  {
+   "fi": "unohtaa",
+   "et": "unustama",
+   "gloss_en": "to forget",
+   "pos": "v"
+  },
+  {
+   "fi": "urheilu",
+   "et": "sport",
+   "gloss_en": "sport",
+   "pos": "n"
+  },
+  {
+   "fi": "usein",
+   "et": "tihti",
+   "gloss_en": "often",
+   "pos": "adv"
+  },
+  {
+   "fi": "uusi",
+   "et": "uus",
+   "gloss_en": "new",
+   "pos": "adj"
+  },
+  {
+   "fi": "uutinen",
+   "et": "uudis",
+   "gloss_en": "news (item)",
+   "pos": "n"
+  },
+  {
+   "fi": "vaarallinen",
+   "et": "ohtlik",
+   "gloss_en": "dangerous",
+   "pos": "adj"
+  },
+  {
+   "fi": "vaate",
+   "et": "riie",
+   "gloss_en": "garment / clothes",
+   "pos": "n"
+  },
+  {
+   "fi": "vahva",
+   "et": "tugev",
+   "gloss_en": "strong",
+   "pos": "adj"
+  },
+  {
+   "fi": "vaihtaa",
+   "et": "vahetama",
+   "gloss_en": "to change / exchange",
+   "pos": "v"
+  },
+  {
+   "fi": "vaikea",
+   "et": "raske",
+   "gloss_en": "difficult",
+   "pos": "adj"
+  },
+  {
+   "fi": "vaimo",
+   "et": "naine",
+   "gloss_en": "wife",
+   "pos": "n"
+  },
+  {
+   "fi": "vain",
+   "et": "ainult",
+   "gloss_en": "only",
+   "pos": "adv"
+  },
+  {
+   "fi": "vakava",
+   "et": "tõsine",
+   "gloss_en": "serious",
+   "pos": "adj"
+  },
+  {
+   "fi": "valkoinen",
+   "et": "valge",
+   "gloss_en": "white",
+   "pos": "adj"
+  },
+  {
+   "fi": "valmis",
+   "et": "valmis",
+   "gloss_en": "ready",
+   "pos": "adj"
+  },
+  {
+   "fi": "valo",
+   "et": "valgus",
+   "gloss_en": "light",
+   "pos": "n"
+  },
+  {
+   "fi": "vanha",
+   "et": "vana",
+   "gloss_en": "old",
+   "pos": "adj"
+  },
+  {
+   "fi": "vapaa",
+   "et": "vaba",
+   "gloss_en": "free",
+   "pos": "adj"
+  },
+  {
+   "fi": "vasen",
+   "et": "vasak",
+   "gloss_en": "left",
+   "pos": "adj"
+  },
+  {
+   "fi": "vastata",
+   "et": "vastama",
+   "gloss_en": "to answer",
+   "pos": "v"
+  },
+  {
+   "fi": "vastaus",
+   "et": "vastus",
+   "gloss_en": "answer",
+   "pos": "n"
+  },
+  {
+   "fi": "veli",
+   "et": "vend",
+   "gloss_en": "brother",
+   "pos": "n"
+  },
+  {
+   "fi": "veri",
+   "et": "veri",
+   "gloss_en": "blood",
+   "pos": "n"
+  },
+  {
+   "fi": "vesi",
+   "et": "vesi",
+   "gloss_en": "water",
+   "pos": "n"
+  },
+  {
+   "fi": "viedä",
+   "et": "viima",
+   "gloss_en": "to take (somewhere)",
+   "pos": "v"
+  },
+  {
+   "fi": "vielä",
+   "et": "veel",
+   "gloss_en": "still / yet",
+   "pos": "adv"
+  },
+  {
+   "fi": "vieressä",
+   "et": "kõrval",
+   "gloss_en": "beside",
+   "pos": "adv"
+  },
+  {
+   "fi": "viha",
+   "et": "viha",
+   "gloss_en": "anger / hate",
+   "pos": "n"
+  },
+  {
+   "fi": "vihainen",
+   "et": "vihane",
+   "gloss_en": "angry",
+   "pos": "adj"
+  },
+  {
+   "fi": "vihata",
+   "et": "vihkama",
+   "gloss_en": "to hate",
+   "pos": "v"
+  },
+  {
+   "fi": "vihreä",
+   "et": "roheline",
+   "gloss_en": "green",
+   "pos": "adj"
+  },
+  {
+   "fi": "viikko",
+   "et": "nädal",
+   "gloss_en": "week",
+   "pos": "n"
+  },
+  {
+   "fi": "viimeinen",
+   "et": "viimane",
+   "gloss_en": "last",
+   "pos": "adj"
+  },
+  {
+   "fi": "viini",
+   "et": "vein",
+   "gloss_en": "wine",
+   "pos": "n"
+  },
+  {
+   "fi": "viisi",
+   "et": "viis",
+   "gloss_en": "five",
+   "pos": "num"
+  },
+  {
+   "fi": "virallinen",
+   "et": "ametlik",
+   "gloss_en": "official",
+   "pos": "adj"
+  },
+  {
+   "fi": "voi",
+   "et": "võib",
+   "gloss_en": "can / may (voida)",
+   "pos": "v"
+  },
+  {
+   "fi": "voida",
+   "et": "võima",
+   "gloss_en": "to be able",
+   "pos": "v"
+  },
+  {
+   "fi": "voima",
+   "et": "jõud",
+   "gloss_en": "power / strength",
+   "pos": "n"
+  },
+  {
+   "fi": "vuosi",
+   "et": "aasta",
+   "gloss_en": "year",
+   "pos": "n"
+  },
+  {
+   "fi": "väki",
+   "et": "rahvas",
+   "gloss_en": "people / folk",
+   "pos": "n"
+  },
+  {
+   "fi": "välillä",
+   "et": "vahel",
+   "gloss_en": "between / sometimes",
+   "pos": "adv"
+  },
+  {
+   "fi": "väri",
+   "et": "värv",
+   "gloss_en": "colour",
+   "pos": "n"
+  },
+  {
+   "fi": "väsynyt",
+   "et": "väsinud",
+   "gloss_en": "tired",
+   "pos": "adj"
+  },
+  {
+   "fi": "yhdeksän",
+   "et": "üheksa",
+   "gloss_en": "nine",
+   "pos": "num"
+  },
+  {
+   "fi": "yhdessä",
+   "et": "koos",
+   "gloss_en": "together",
+   "pos": "adv"
+  },
+  {
+   "fi": "yksi",
+   "et": "üks",
+   "gloss_en": "one",
+   "pos": "num"
+  },
+  {
+   "fi": "yksin",
+   "et": "üksi",
+   "gloss_en": "alone",
+   "pos": "adv"
+  },
+  {
+   "fi": "yksityinen",
+   "et": "era",
+   "gloss_en": "private",
+   "pos": "adj"
+  },
+  {
+   "fi": "yleinen",
+   "et": "üldine",
+   "gloss_en": "general / common",
+   "pos": "adj"
+  },
+  {
+   "fi": "ylös",
+   "et": "üles",
+   "gloss_en": "up",
+   "pos": "adv"
+  },
+  {
+   "fi": "ymmärtää",
+   "et": "mõistma",
+   "gloss_en": "to understand",
+   "pos": "v"
+  },
+  {
+   "fi": "ystävä",
+   "et": "sõber",
+   "gloss_en": "friend",
+   "pos": "n"
+  },
+  {
+   "fi": "ystävällinen",
+   "et": "sõbralik",
+   "gloss_en": "friendly",
+   "pos": "adj"
+  },
+  {
+   "fi": "yö",
+   "et": "öö",
+   "gloss_en": "night",
+   "pos": "n"
+  },
+  {
+   "fi": "äiti",
+   "et": "ema",
+   "gloss_en": "mother",
+   "pos": "n"
+  },
+  {
+   "fi": "älykäs",
+   "et": "intelligentne",
+   "gloss_en": "intelligent",
+   "pos": "adj"
+  },
+  {
+   "fi": "äänekäs",
+   "et": "valju",
+   "gloss_en": "loud",
+   "pos": "adj"
+  },
+  {
+   "fi": "öljy",
+   "et": "õli",
+   "gloss_en": "oil",
+   "pos": "n"
+  }
+ ]
+}

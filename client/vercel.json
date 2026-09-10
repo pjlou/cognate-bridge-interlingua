@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "comment": "Client-side routing: every unmatched path must serve the SPA shell, or a hard refresh on /study returns a 404.",
+      "source": "/((?!assets/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

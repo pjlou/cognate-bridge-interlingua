@@ -1,0 +1,394 @@
+{
+ "bridge_language": "ia",
+ "patterns": [
+  {
+   "slug": "ud-det-noun",
+   "name": "Determiner before noun",
+   "family": "Romance",
+   "summary": "A determiner (article) precedes its noun across the family.",
+   "description": "UD treebanks show det→noun as one of the most frequent dependency arcs in Germanic and Romance. Bridge drills practice the same order.",
+   "source_note": "Universal Dependencies dependency templates (frequency-ranked); example sentences newly written for Cognate Bridge; template det-noun",
+   "difficulty_level": 1,
+   "drill_kind": "multiple_choice",
+   "position": 101,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "la casa",
+     "gloss_en": "the house",
+     "highlight": "la",
+     "prompt": "the house",
+     "answer": "la casa",
+     "distractors": [
+      "una porta",
+      "los amigos"
+     ],
+     "note": "Determiner before noun.",
+     "parallels": {
+      "es": "la casa",
+      "fr": "la maison",
+      "it": "la casa",
+      "pt": "a casa",
+      "de": "das Haus",
+      "nl": "het huis"
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "lo libro",
+     "gloss_en": "the book",
+     "highlight": "lo",
+     "prompt": "the book",
+     "answer": "lo libro",
+     "distractors": [
+      "los amigos"
+     ],
+     "note": "Same arc with another noun.",
+     "parallels": {
+      "es": "el libro",
+      "fr": "le livre",
+      "it": "il libro",
+      "pt": "o livro",
+      "de": "das Buch",
+      "nl": "het boek"
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "una porta",
+     "gloss_en": "a door",
+     "highlight": "una",
+     "prompt": "a door",
+     "answer": "una porta",
+     "distractors": [
+      "la casa"
+     ],
+     "note": "Indefinite determiner still precedes.",
+     "parallels": {
+      "es": "una puerta",
+      "fr": "une porte",
+      "it": "una porta",
+      "pt": "uma porta",
+      "de": "eine Tür",
+      "nl": "een deur"
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "los amigos",
+     "gloss_en": "the friends",
+     "highlight": "los",
+     "prompt": "the friends",
+     "answer": "los amigos",
+     "distractors": [
+      "lo libro",
+      "la casa"
+     ],
+     "note": "Plural determiner + plural noun.",
+     "parallels": {
+      "es": "los amigos",
+      "fr": "les amis",
+      "it": "gli amici",
+      "pt": "os amigos",
+      "de": "die Freunde",
+      "nl": "de vrienden"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "ud-nsubj-verb",
+   "name": "Subject before finite verb",
+   "family": "Romance",
+   "summary": "Declarative clauses put the nominal subject before the finite verb.",
+   "description": "nsubj→verb is ubiquitous in UD for SVO languages in both families. Learners practise recognising subject–verb order in simple clauses.",
+   "source_note": "Universal Dependencies dependency templates (frequency-ranked); example sentences newly written for Cognate Bridge; template nsubj-verb",
+   "difficulty_level": 2,
+   "drill_kind": "multiple_choice",
+   "position": 102,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "Io canta.",
+     "gloss_en": "I sing.",
+     "highlight": "Io",
+     "prompt": "I sing.",
+     "answer": "Io canta.",
+     "distractors": [
+      "Nos mangia.",
+      "Los canes dormen."
+     ],
+     "note": "Subject then finite verb.",
+     "parallels": {
+      "es": "Yo canto.",
+      "fr": "Je chante.",
+      "it": "Io canto.",
+      "pt": "Eu canto.",
+      "de": "Ich singe.",
+      "nl": "Ik zing."
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "Maria lege.",
+     "gloss_en": "Maria reads.",
+     "highlight": "Maria",
+     "prompt": "Maria reads.",
+     "answer": "Maria lege.",
+     "distractors": [
+      "Nos mangia."
+     ],
+     "note": "Proper-name subject.",
+     "parallels": {
+      "es": "María lee.",
+      "fr": "Maria lit.",
+      "it": "Maria legge.",
+      "pt": "Maria lê.",
+      "de": "Maria liest.",
+      "nl": "Maria leest."
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "Los canes dormen.",
+     "gloss_en": "The dogs sleep.",
+     "highlight": "canes",
+     "prompt": "The dogs sleep.",
+     "answer": "Los canes dormen.",
+     "distractors": [
+      "Io canta.",
+      "Nos mangia."
+     ],
+     "note": "Plural subject.",
+     "parallels": {
+      "es": "Los perros duermen.",
+      "fr": "Les chiens dorment.",
+      "it": "I cani dormono.",
+      "pt": "Os cães dormem.",
+      "de": "Die Hunde schlafen.",
+      "nl": "De honden slapen."
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "Nos mangia.",
+     "gloss_en": "We eat.",
+     "highlight": "Nos",
+     "prompt": "We eat.",
+     "answer": "Nos mangia.",
+     "distractors": [
+      "Io canta.",
+      "Los canes dormen.",
+      "Maria lege."
+     ],
+     "note": "Pronominal subject.",
+     "parallels": {
+      "es": "Nosotros comemos.",
+      "fr": "Nous mangeons.",
+      "it": "Noi mangiamo.",
+      "pt": "Nós comemos.",
+      "de": "Wir essen.",
+      "nl": "Wij eten."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "ud-amod-noun",
+   "name": "Attributive adjective with noun",
+   "family": "Romance",
+   "summary": "An adjectival modifier attaches to its noun (postposed in Romance bridges).",
+   "description": "amod→noun is high-frequency in UD. Romance bridges normally postpose the adjective; Germanic often preposes — drills highlight the bridge’s order.",
+   "source_note": "Universal Dependencies dependency templates (frequency-ranked); example sentences newly written for Cognate Bridge; template amod-noun",
+   "difficulty_level": 2,
+   "drill_kind": "multiple_choice",
+   "position": 103,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "casa bòna",
+     "gloss_en": "good house",
+     "highlight": "bòna",
+     "prompt": "good house",
+     "answer": "casa bòna",
+     "distractors": [
+      "acqua frìdda"
+     ],
+     "note": "Adjective attached to the noun.",
+     "parallels": {
+      "es": "casa buena",
+      "fr": "bonne maison",
+      "it": "casa buona",
+      "pt": "casa boa",
+      "de": "gutes Haus",
+      "nl": "goed huis"
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "libro nòvo",
+     "gloss_en": "new book",
+     "highlight": "nòvo",
+     "prompt": "new book",
+     "answer": "libro nòvo",
+     "distractors": [],
+     "note": "Another amod pair.",
+     "parallels": {
+      "es": "libro nuevo",
+      "fr": "livre nouveau",
+      "it": "libro nuovo",
+      "pt": "livro novo",
+      "de": "neues Buch",
+      "nl": "nieuw boek"
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "acqua frìdda",
+     "gloss_en": "cold water",
+     "highlight": "frìdda",
+     "prompt": "cold water",
+     "answer": "acqua frìdda",
+     "distractors": [
+      "amicos fìdeles",
+      "casa bòna"
+     ],
+     "note": "Agreement cues may appear on the adjective.",
+     "parallels": {
+      "es": "agua fría",
+      "fr": "eau froide",
+      "it": "acqua fredda",
+      "pt": "água fria",
+      "de": "kaltes Wasser",
+      "nl": "koud water"
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "amicos fìdeles",
+     "gloss_en": "faithful friends",
+     "highlight": "fìdeles",
+     "prompt": "faithful friends",
+     "answer": "amicos fìdeles",
+     "distractors": [
+      "acqua frìdda"
+     ],
+     "note": "Plural adjective with plural noun.",
+     "parallels": {
+      "es": "amigos fieles",
+      "fr": "amis fidèles",
+      "it": "amici fedeli",
+      "pt": "amigos fiéis",
+      "de": "treue Freunde",
+      "nl": "trouwe vrienden"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "ud-aux-participle",
+   "name": "Auxiliary before participle",
+   "family": "Romance",
+   "summary": "Perfect and passive compounds put the auxiliary before the participle.",
+   "description": "aux→participle (or aux:pass) is frequent in UD Romance and Germanic. Bridge drills focus on recognising the compound order.",
+   "source_note": "Universal Dependencies dependency templates (frequency-ranked); example sentences newly written for Cognate Bridge; template aux-participle",
+   "difficulty_level": 3,
+   "drill_kind": "multiple_choice",
+   "position": 104,
+   "examples": [
+    {
+     "position": 1,
+     "bridge_text": "Ha cantato.",
+     "gloss_en": "Has sung.",
+     "highlight": "Ha",
+     "prompt": "Has sung.",
+     "answer": "Ha cantato.",
+     "distractors": [
+      "Èst andato.",
+      "Havo leìto.",
+      "La porta èst aperta."
+     ],
+     "note": "Auxiliary then participle.",
+     "parallels": {
+      "es": "Ha cantado.",
+      "fr": "A chanté.",
+      "it": "Ha cantato.",
+      "pt": "Tem cantado.",
+      "de": "Hat gesungen.",
+      "nl": "Heeft gezongen."
+     }
+    },
+    {
+     "position": 2,
+     "bridge_text": "Èst andato.",
+     "gloss_en": "Has gone / is gone.",
+     "highlight": "Èst",
+     "prompt": "Has gone / is gone.",
+     "answer": "Èst andato.",
+     "distractors": [
+      "Ha cantato.",
+      "La porta èst aperta.",
+      "Havo leìto."
+     ],
+     "note": "Be-auxiliary compounds follow the same order.",
+     "parallels": {
+      "es": "Ha ido.",
+      "fr": "Est allé.",
+      "it": "È andato.",
+      "pt": "Foi.",
+      "de": "Ist gegangen.",
+      "nl": "Is gegaan."
+     }
+    },
+    {
+     "position": 3,
+     "bridge_text": "Havo leìto.",
+     "gloss_en": "I have read.",
+     "highlight": "Havo",
+     "prompt": "I have read.",
+     "answer": "Havo leìto.",
+     "distractors": [
+      "Ha cantato.",
+      "La porta èst aperta.",
+      "Èst andato."
+     ],
+     "note": "First-person auxiliary.",
+     "parallels": {
+      "es": "He leído.",
+      "fr": "J’ai lu.",
+      "it": "Ho letto.",
+      "pt": "Li.",
+      "de": "Ich habe gelesen.",
+      "nl": "Ik heb gelezen."
+     }
+    },
+    {
+     "position": 4,
+     "bridge_text": "La porta èst aperta.",
+     "gloss_en": "The door is open / opened.",
+     "highlight": "èst",
+     "prompt": "The door is open / opened.",
+     "answer": "La porta èst aperta.",
+     "distractors": [
+      "Ha cantato.",
+      "Èst andato."
+     ],
+     "note": "Passive / result state.",
+     "parallels": {
+      "es": "La puerta está abierta.",
+      "fr": "La porte est ouverte.",
+      "it": "La porta è aperta.",
+      "pt": "A porta está aberta.",
+      "de": "Die Tür ist offen.",
+      "nl": "De deur is open."
+     }
+    }
+   ]
+  }
+ ],
+ "source": "Universal Dependencies dependency templates (frequency-ranked); example sentences newly written for Cognate Bridge",
+ "stats": {
+  "patterns": 4,
+  "examples": 16
+ }
+}

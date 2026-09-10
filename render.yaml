@@ -1,0 +1,25 @@
+# Render Blueprint for the Cognate Bridge API.
+#
+# The database is deliberately not declared here. Render's free Postgres expires after
+# 30 days, which would take the deployed instance down and defeat the point of having
+# one. Point DATABASE_URL at a Neon free-tier database instead, which does not expire.
+services:
+  - type: web
+    name: cognate-bridge-api
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm ci && npm run build
+    # Migrations run on boot. Safe here because node-pg-migrate records applied
+    # migrations in the database, so a redeploy with no new files is a no-op.
+    startCommand: npm run migrate:up && npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false

@@ -1,0 +1,32 @@
+node_modules/
+dist/
+build/
+coverage/
+
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Validation lexicons are consulted, never redistributed. See docs/SOURCES.md.
+parsers/lexicons/
+
+# Frequency / cognate / UD raw corpus downloads (converted JSON is committed).
+parsers/frequency/cache/
+parsers/cognates/cache/
+parsers/ud_grammar/cache/
+
+# Piper local TTS binary and voice models (see README).
+server/piper/
+
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*

@@ -1,0 +1,68 @@
+.drill__frame {
+  margin: 12px 0 0;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.drill__caveat {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  background: var(--surface-sunk);
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.rule-map {
+  width: 100%;
+  margin: 0 0 22px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.rule-map th,
+.rule-map td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.rule-map th {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+}
+
+.rule-map code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+}
+
+.rule-forms {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.rule-forms__code {
+  display: inline-block;
+  margin-right: 6px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.rule-forms__text {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+}

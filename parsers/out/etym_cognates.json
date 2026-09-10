@@ -1,0 +1,645 @@
+{
+ "source": "Etymological Wordnet-style fixture + MUSE bilingual similarity",
+ "source_url": "https://www1.icsi.berkeley.edu/~demelo/etymwn/",
+ "description": "Augment cognates: curated etym links (curated provenance) and translation-pair edit-distance matches (similarity provenance).",
+ "stats": {
+  "english_lemmas": 21,
+  "rows": 74
+ },
+ "by_english": {
+  "father": [
+   {
+    "language": "de",
+    "word": "Vater",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "nl",
+    "word": "vader",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "es",
+    "word": "padre",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "fr",
+    "word": "père",
+    "provenance": "curated",
+    "confidence": 0.88,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "it",
+    "word": "padre",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "pt",
+    "word": "pai",
+    "provenance": "curated",
+    "confidence": 0.85,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   }
+  ],
+  "mother": [
+   {
+    "language": "de",
+    "word": "Mutter",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "nl",
+    "word": "moeder",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "es",
+    "word": "madre",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "fr",
+    "word": "mère",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "it",
+    "word": "madre",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "pt",
+    "word": "mãe",
+    "provenance": "curated",
+    "confidence": 0.88,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   }
+  ],
+  "fish": [
+   {
+    "language": "de",
+    "word": "Fisch",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "nl",
+    "word": "vis",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "es",
+    "word": "pez",
+    "provenance": "curated",
+    "confidence": 0.7,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "fr",
+    "word": "poisson",
+    "provenance": "curated",
+    "confidence": 0.65,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "it",
+    "word": "pesce",
+    "provenance": "curated",
+    "confidence": 0.75,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "pt",
+    "word": "peixe",
+    "provenance": "curated",
+    "confidence": 0.75,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   }
+  ],
+  "water": [
+   {
+    "language": "de",
+    "word": "Wasser",
+    "provenance": "curated",
+    "confidence": 0.92,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "nl",
+    "word": "water",
+    "provenance": "curated",
+    "confidence": 0.98,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "es",
+    "word": "agua",
+    "provenance": "curated",
+    "confidence": 0.6,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "fr",
+    "word": "eau",
+    "provenance": "curated",
+    "confidence": 0.55,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "it",
+    "word": "acqua",
+    "provenance": "curated",
+    "confidence": 0.65,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "pt",
+    "word": "água",
+    "provenance": "curated",
+    "confidence": 0.65,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   }
+  ],
+  "house": [
+   {
+    "language": "de",
+    "word": "Haus",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "nl",
+    "word": "huis",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "es",
+    "word": "casa",
+    "provenance": "curated",
+    "confidence": 0.7,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "fr",
+    "word": "maison",
+    "provenance": "curated",
+    "confidence": 0.55,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "it",
+    "word": "casa",
+    "provenance": "curated",
+    "confidence": 0.7,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "pt",
+    "word": "casa",
+    "provenance": "curated",
+    "confidence": 0.7,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   }
+  ],
+  "night": [
+   {
+    "language": "de",
+    "word": "Nacht",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "nl",
+    "word": "nacht",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "es",
+    "word": "noche",
+    "provenance": "curated",
+    "confidence": 0.8,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "fr",
+    "word": "nuit",
+    "provenance": "curated",
+    "confidence": 0.75,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "it",
+    "word": "notte",
+    "provenance": "curated",
+    "confidence": 0.85,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "pt",
+    "word": "noite",
+    "provenance": "curated",
+    "confidence": 0.85,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   }
+  ],
+  "three": [
+   {
+    "language": "de",
+    "word": "drei",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "nl",
+    "word": "drie",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "es",
+    "word": "tres",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "fr",
+    "word": "trois",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "it",
+    "word": "tre",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "pt",
+    "word": "três",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "ro",
+    "word": "trei",
+    "provenance": "similarity",
+    "confidence": 0.6,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   }
+  ],
+  "heart": [
+   {
+    "language": "de",
+    "word": "Herz",
+    "provenance": "curated",
+    "confidence": 0.9,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "nl",
+    "word": "hart",
+    "provenance": "curated",
+    "confidence": 0.95,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "es",
+    "word": "corazón",
+    "provenance": "curated",
+    "confidence": 0.7,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "fr",
+    "word": "cœur",
+    "provenance": "curated",
+    "confidence": 0.7,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "it",
+    "word": "cuore",
+    "provenance": "curated",
+    "confidence": 0.75,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   },
+   {
+    "language": "pt",
+    "word": "coração",
+    "provenance": "curated",
+    "confidence": 0.7,
+    "validated_against": "etymological-wordnet-fixture",
+    "notes": null
+   }
+  ],
+  "name": [
+   {
+    "language": "de",
+    "word": "name",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "ro",
+    "word": "nume",
+    "provenance": "similarity",
+    "confidence": 0.75,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   }
+  ],
+  "hand": [
+   {
+    "language": "de",
+    "word": "hand",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "nl",
+    "word": "hand",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   }
+  ],
+  "land": [
+   {
+    "language": "de",
+    "word": "land",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "nl",
+    "word": "land",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   }
+  ],
+  "animal": [
+   {
+    "language": "es",
+    "word": "animal",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "fr",
+    "word": "animal",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "it",
+    "word": "animale",
+    "provenance": "similarity",
+    "confidence": 0.86,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "pt",
+    "word": "animal",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "ro",
+    "word": "animal",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   }
+  ],
+  "hospital": [
+   {
+    "language": "es",
+    "word": "hospital",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "pt",
+    "word": "hospital",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "ro",
+    "word": "spital",
+    "provenance": "similarity",
+    "confidence": 0.75,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   }
+  ],
+  "family": [
+   {
+    "language": "es",
+    "word": "familia",
+    "provenance": "similarity",
+    "confidence": 0.71,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   },
+   {
+    "language": "ro",
+    "word": "familie",
+    "provenance": "similarity",
+    "confidence": 0.71,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   }
+  ],
+  "nation": [
+   {
+    "language": "fr",
+    "word": "nation",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "ro",
+    "word": "națiune",
+    "provenance": "similarity",
+    "confidence": 0.57,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   }
+  ],
+  "table": [
+   {
+    "language": "fr",
+    "word": "table",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   }
+  ],
+  "familia": [
+   {
+    "language": "it",
+    "word": "famiglia",
+    "provenance": "similarity",
+    "confidence": 0.88,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   },
+   {
+    "language": "pt",
+    "word": "família",
+    "provenance": "similarity",
+    "confidence": 0.86,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   }
+  ],
+  "man": [
+   {
+    "language": "nl",
+    "word": "man",
+    "provenance": "similarity",
+    "confidence": 1.0,
+    "validated_against": "muse-bilingual",
+    "notes": "high surface similarity without etym link; possible false friend"
+   }
+  ],
+  "time": [
+   {
+    "language": "ro",
+    "word": "timp",
+    "provenance": "similarity",
+    "confidence": 0.75,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   }
+  ],
+  "part": [
+   {
+    "language": "ro",
+    "word": "parte",
+    "provenance": "similarity",
+    "confidence": 0.8,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   }
+  ],
+  "person": [
+   {
+    "language": "ro",
+    "word": "persoană",
+    "provenance": "similarity",
+    "confidence": 0.75,
+    "validated_against": "muse-bilingual",
+    "notes": null
+   }
+  ]
+ }
+}

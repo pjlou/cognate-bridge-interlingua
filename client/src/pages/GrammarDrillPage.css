@@ -1,0 +1,282 @@
+.drill__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 18px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.drill__description {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.drill__source {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 12px 0 0;
+  font-size: 0.74rem;
+  color: var(--ink-faint);
+}
+
+.drill {
+  padding: 24px;
+}
+
+.drill__meter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.drill__prompt {
+  margin: 18px 0 22px;
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  line-height: 1.35;
+}
+
+.drill__options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.drill__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: left;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  color: var(--ink);
+  transition:
+    border-color 0.12s ease,
+    background 0.12s ease;
+}
+
+.drill__option:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.drill__option:disabled {
+  cursor: default;
+}
+
+.drill__option.is-correct {
+  border-color: var(--positive);
+  background: #eaf3ed;
+  color: var(--positive);
+}
+
+.drill__option.is-wrong {
+  border-color: var(--negative);
+  background: #fdeceb;
+  color: var(--negative);
+}
+
+.drill__option.is-dimmed {
+  opacity: 0.45;
+}
+
+.word-order {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.word-order__answer {
+  min-height: 72px;
+  padding: 14px 16px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface-sunk);
+}
+
+.word-order__placeholder {
+  margin: 0;
+  color: var(--ink-faint);
+  font-size: 0.9rem;
+}
+
+.word-order__chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.word-order__chip {
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.word-order__chip:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.word-order__chip.is-placed {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.word-order__chip:disabled {
+  cursor: default;
+}
+
+.word-order__punct {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  padding: 8px 2px;
+}
+
+.word-order__verdict {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.word-order__verdict.is-correct {
+  color: var(--positive);
+  font-weight: 600;
+}
+
+.word-order__verdict.is-wrong {
+  color: var(--negative);
+}
+
+.drill__feedback {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.drill__note,
+.drill__highlight {
+  margin: 0 0 10px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.drill__highlight strong {
+  font-family: var(--mono);
+  font-size: 0.84rem;
+  background: var(--surface-sunk);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+/* ---------- parallel translations ---------- */
+
+.parallels {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  background: var(--surface-sunk);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.parallels li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.parallels__code {
+  flex-shrink: 0;
+  width: 22px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.parallels__text {
+  font-family: var(--serif);
+  font-size: 0.98rem;
+}
+
+/* ---------- session summary ---------- */
+
+.drill--done {
+  text-align: center;
+  padding: 44px 24px;
+}
+
+.drill__score {
+  font-size: 2.6rem;
+  margin-bottom: 8px;
+}
+
+.drill__verdict {
+  margin: 0 0 22px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+/* ---------- counter-examples ---------- */
+
+.drill__counter {
+  margin-top: 34px;
+}
+
+.drill__counter-lede {
+  margin: 0 0 14px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.drill__counter-item {
+  padding: 14px 16px;
+  border-left: 2px solid var(--negative);
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 10px;
+}
+
+.drill__counter-text {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--negative);
+}
+
+.drill__counter-gloss {
+  margin: 4px 0 0;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+.drill__counter-note {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}

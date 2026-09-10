@@ -1,0 +1,126 @@
+.targets__group {
+  margin-bottom: 22px;
+}
+
+.targets__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.targets__row {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 4px;
+}
+
+.targets__option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 0.92rem;
+  color: var(--ink);
+  transition:
+    border-color 0.12s ease,
+    background 0.12s ease;
+}
+
+.targets__option:hover {
+  border-color: var(--accent);
+}
+
+.targets__option.is-selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.targets__priority {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-faint);
+}
+
+.targets__priority:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.targets__priority.is-priority {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.targets__code {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.targets__option.is-selected .targets__code {
+  color: var(--accent);
+}
+
+.targets__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  min-height: 1.4em;
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.targets__priority-hint {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.targets__saved {
+  color: var(--positive);
+  font-weight: 600;
+}
+
+.targets--compact .targets__group {
+  margin-bottom: 16px;
+}
+
+.targets--embedded .targets__group {
+  margin-bottom: 0;
+}
+
+.targets--embedded .section-heading {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 10px;
+}
+
+.targets--embedded .targets__option {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+.targets--embedded .targets__priority {
+  width: 34px;
+}
+
+.loading-block--inline {
+  padding: 18px 0;
+}

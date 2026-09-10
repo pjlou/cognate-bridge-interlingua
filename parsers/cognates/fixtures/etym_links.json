@@ -1,0 +1,66 @@
+{
+  "father": [
+    {"language": "de", "word": "Vater", "confidence": 0.95},
+    {"language": "nl", "word": "vader", "confidence": 0.95},
+    {"language": "es", "word": "padre", "confidence": 0.9},
+    {"language": "fr", "word": "père", "confidence": 0.88},
+    {"language": "it", "word": "padre", "confidence": 0.9},
+    {"language": "pt", "word": "pai", "confidence": 0.85}
+  ],
+  "mother": [
+    {"language": "de", "word": "Mutter", "confidence": 0.95},
+    {"language": "nl", "word": "moeder", "confidence": 0.95},
+    {"language": "es", "word": "madre", "confidence": 0.9},
+    {"language": "fr", "word": "mère", "confidence": 0.9},
+    {"language": "it", "word": "madre", "confidence": 0.9},
+    {"language": "pt", "word": "mãe", "confidence": 0.88}
+  ],
+  "fish": [
+    {"language": "de", "word": "Fisch", "confidence": 0.95},
+    {"language": "nl", "word": "vis", "confidence": 0.9},
+    {"language": "es", "word": "pez", "confidence": 0.7},
+    {"language": "fr", "word": "poisson", "confidence": 0.65},
+    {"language": "it", "word": "pesce", "confidence": 0.75},
+    {"language": "pt", "word": "peixe", "confidence": 0.75}
+  ],
+  "water": [
+    {"language": "de", "word": "Wasser", "confidence": 0.92},
+    {"language": "nl", "word": "water", "confidence": 0.98},
+    {"language": "es", "word": "agua", "confidence": 0.6},
+    {"language": "fr", "word": "eau", "confidence": 0.55},
+    {"language": "it", "word": "acqua", "confidence": 0.65},
+    {"language": "pt", "word": "água", "confidence": 0.65}
+  ],
+  "house": [
+    {"language": "de", "word": "Haus", "confidence": 0.95},
+    {"language": "nl", "word": "huis", "confidence": 0.95},
+    {"language": "es", "word": "casa", "confidence": 0.7},
+    {"language": "fr", "word": "maison", "confidence": 0.55},
+    {"language": "it", "word": "casa", "confidence": 0.7},
+    {"language": "pt", "word": "casa", "confidence": 0.7}
+  ],
+  "night": [
+    {"language": "de", "word": "Nacht", "confidence": 0.95},
+    {"language": "nl", "word": "nacht", "confidence": 0.95},
+    {"language": "es", "word": "noche", "confidence": 0.8},
+    {"language": "fr", "word": "nuit", "confidence": 0.75},
+    {"language": "it", "word": "notte", "confidence": 0.85},
+    {"language": "pt", "word": "noite", "confidence": 0.85}
+  ],
+  "three": [
+    {"language": "de", "word": "drei", "confidence": 0.9},
+    {"language": "nl", "word": "drie", "confidence": 0.9},
+    {"language": "es", "word": "tres", "confidence": 0.95},
+    {"language": "fr", "word": "trois", "confidence": 0.9},
+    {"language": "it", "word": "tre", "confidence": 0.95},
+    {"language": "pt", "word": "três", "confidence": 0.95}
+  ],
+  "heart": [
+    {"language": "de", "word": "Herz", "confidence": 0.9},
+    {"language": "nl", "word": "hart", "confidence": 0.95},
+    {"language": "es", "word": "corazón", "confidence": 0.7},
+    {"language": "fr", "word": "cœur", "confidence": 0.7},
+    {"language": "it", "word": "cuore", "confidence": 0.75},
+    {"language": "pt", "word": "coração", "confidence": 0.7}
+  ]
+}

@@ -1,0 +1,180 @@
+.correspondence__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.correspondence__row {
+  display: grid;
+  grid-template-columns: 116px 1fr;
+  gap: 4px 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  align-items: baseline;
+}
+
+.correspondence__row:first-child {
+  border-top: none;
+}
+
+.correspondence__lang {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.correspondence__code {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+
+.correspondence__name {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+
+.correspondence__forms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+
+.correspondence__form {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  color: var(--ink);
+}
+
+.correspondence__icon.is-attested,
+.correspondence__icon.is-confirmed {
+  color: var(--positive);
+}
+
+.correspondence__icon.is-predicted {
+  color: var(--warn);
+}
+
+/* The rule sits under the forms it explains, indented into the value column. */
+.correspondence__rules {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.correspondence__rule {
+  grid-column: 2;
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: var(--surface-sunk);
+  border-radius: var(--radius);
+  border-left: 2px solid var(--line-strong);
+}
+
+.correspondence__rule-name {
+  margin: 0 0 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.correspondence__rule-notation {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.correspondence__rule-text {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+.correspondence__rule-example {
+  margin: 6px 0 0;
+  font-size: 0.88rem;
+}
+
+.correspondence__rule-example code {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.correspondence__rule-source {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 7px 0 0;
+  font-size: 0.74rem;
+  color: var(--ink-faint);
+}
+
+.correspondence__practice {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+}
+
+.correspondence__practice a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.correspondence__empty {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.correspondence__legend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}
+
+.correspondence__legend-gap {
+  width: 14px;
+}
+
+.sound-laws {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sound-laws .correspondence__rule {
+  grid-column: auto;
+}
+
+@media (max-width: 560px) {
+  .correspondence__row {
+    grid-template-columns: 1fr;
+  }
+
+  .correspondence__rules,
+  .correspondence__rule {
+    grid-column: 1;
+  }
+}

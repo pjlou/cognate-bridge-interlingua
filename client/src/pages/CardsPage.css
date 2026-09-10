@@ -1,0 +1,103 @@
+.cards__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+  margin-bottom: 18px;
+}
+
+.cards__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 200px;
+  padding: 0 14px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  color: var(--ink-faint);
+}
+
+.cards__search input {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: var(--ink);
+}
+
+.cards__search input:focus {
+  outline: none;
+}
+
+.cards__filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.cards__filter select {
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font: inherit;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.cards__count {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+
+.cards-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.cards-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.cards-table th,
+.cards-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.cards-table th {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+}
+
+.cards-table tr:last-child td {
+  border-bottom: none;
+}
+
+.cards-table__headword {
+  font-family: var(--serif);
+  font-weight: 600;
+}
+
+.cards-table .tag {
+  margin-right: 6px;
+}
+
+.cards-table__check {
+  width: 2.5rem;
+  text-align: center;
+}

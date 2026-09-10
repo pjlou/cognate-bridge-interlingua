@@ -1,0 +1,340 @@
+"""Finnish grammar patterns for the experimental Cognate Bridge module.
+
+Explanations and example sentences are newly written for this app. Topic selection
+follows Wikibooks *Suomen kieli ulkomaalaisille* (CC BY-SA) and standard pedagogical
+divisions (gradation, object case, locatives, rections). Do not bulk-copy commercial
+handbooks.
+"""
+
+from __future__ import annotations
+
+from common.patterns import Example, Pattern
+
+BRIDGE_CODE = "fin"
+FAMILY = "Uralic"
+
+WIKIBOOKS = (
+    "Wikibooks: Suomen kieli ulkomaalaisille / Finnish Language for Foreigners "
+    "(CC BY-SA; cited by topic, not reproduced)"
+)
+
+PATTERNS: list[Pattern] = [
+    Pattern(
+        slug="consonant-gradation",
+        name="Consonant gradation",
+        family=FAMILY,
+        summary="Closed syllables weaken stem consonants (kk→k, pp→p, tt→t, and more).",
+        description=(
+            "Finnish noun and verb stems often alternate between a strong and a weak grade. "
+            "When a suffix creates a closed syllable (ending in a consonant), many "
+            "stops weaken: kukka → kukan, matto → maton, puku → puvun. Learning the "
+            "common pairs is essential before productive case and tense morphology."
+        ),
+        source_note=f"{WIKIBOOKS}, consonant gradation / astevaihtelu",
+        difficulty_level=2,
+        examples=[
+            Example(
+                bridge_text="kukka → kukan",
+                gloss_en="flower → of the flower",
+                highlight="kk→k",
+                prompt="kukka in the genitive is kukan. Which change is that?",
+                answer="kk → k (strong to weak)",
+                distractors=["k → kk (weak to strong)", "no change", "kk → Ø"],
+                note="Quantitative gradation: long stop shortens in a closed syllable.",
+                parallels={"et": "lill → lille"},
+            ),
+            Example(
+                bridge_text="matto → maton",
+                gloss_en="carpet → of the carpet",
+                highlight="tt→t",
+                prompt="What happens to tt in matto → maton?",
+                answer="tt → t",
+                distractors=["tt → d", "tt stays tt", "t → tt"],
+                note="Same quantitative pattern as kk→k and pp→p.",
+            ),
+            Example(
+                bridge_text="puku → puvun",
+                gloss_en="suit → of the suit",
+                highlight="k→v",
+                prompt="puku → puvun shows which qualitative change?",
+                answer="k → v",
+                distractors=["k → Ø", "k → g", "no change"],
+                note="Single k between vowels often becomes v in the weak grade.",
+            ),
+            Example(
+                bridge_text="tieto → tiedon",
+                gloss_en="knowledge → of the knowledge",
+                highlight="t→d",
+                prompt="tieto → tiedon: the weak grade of t here is…",
+                answer="d",
+                distractors=["t (unchanged)", "Ø (deleted)", "tt"],
+                note="t ~ d is a frequent qualitative pair.",
+                parallels={"et": "teadmine"},
+            ),
+        ],
+    ),
+    Pattern(
+        slug="verb-rections",
+        name="Verb rections",
+        family=FAMILY,
+        summary="Many verbs require a specific case or adposition on their complement.",
+        description=(
+            "Finnish verbs often select the case of their object or complement (rection). "
+            "pitää + -sta means ‘like’; tutustua takes the illative; odottaa takes the "
+            "partitive. Memorising frames with the verb prevents calquing English "
+            "prepositions incorrectly."
+        ),
+        source_note=f"{WIKIBOOKS}, verb rections / verbien rektiot",
+        difficulty_level=3,
+        examples=[
+            Example(
+                bridge_text="Pidän kahvista.",
+                gloss_en="I like coffee.",
+                highlight="-sta",
+                prompt="With pitää ‘like’, the liked thing usually takes which case?",
+                answer="elative (-sta/-stä)",
+                distractors=["partitive (-a/-ä)", "illative (-Vn)", "nominative"],
+                note="pitää + elative = ‘to like’.",
+                parallels={"et": "Mulle meeldib kohv."},
+            ),
+            Example(
+                bridge_text="Tutustuin häneen.",
+                gloss_en="I got acquainted with him/her.",
+                highlight="-Vn",
+                prompt="tutustua ‘get to know’ typically takes…",
+                answer="illative (-Vn / -hVn)",
+                distractors=["elative (-sta)", "adessive (-lla)", "partitive only"],
+                note="The person/thing becomes the destination of ‘getting acquainted’.",
+            ),
+            Example(
+                bridge_text="Odotan bussia.",
+                gloss_en="I am waiting for the bus.",
+                highlight="bussia",
+                prompt="odottaa ‘wait for’ takes which object case in this progressive sense?",
+                answer="partitive",
+                distractors=["genitive/accusative -n", "illative", "elative"],
+                note="Waiting is unbounded; the object is partitive.",
+            ),
+            Example(
+                bridge_text="Kuulun tähän ryhmään.",
+                gloss_en="I belong to this group.",
+                highlight="ryhmään",
+                prompt="kuulua ‘belong’ often takes…",
+                answer="illative",
+                distractors=["elative", "abessive", "nominative object"],
+                note="Belonging is framed as ‘into’ a set.",
+            ),
+        ],
+    ),
+    Pattern(
+        slug="partitive-vs-accusative",
+        name="Partitive vs accusative (object case)",
+        family=FAMILY,
+        summary="Resultative completed objects take -n; incomplete or unbounded ones take partitive.",
+        description=(
+            "Finnish object case encodes aspect and boundedness. A completed, resultative "
+            "action with a countable whole often uses the accusative/genitive -n "
+            "(Luin kirjan). Ongoing, partial, negated, or mass/indefinite objects use the "
+            "partitive (Luen kirjaa; En lukenut kirjaa). This opposition is central to "
+            "Finnish and has no English preposition equivalent."
+        ),
+        source_note=f"{WIKIBOOKS}, partitive and total object",
+        difficulty_level=3,
+        examples=[
+            Example(
+                bridge_text="Luin kirjan.",
+                gloss_en="I read the book (finished it).",
+                highlight="kirjan",
+                prompt="Luin kirjan implies the reading was…",
+                answer="completed / resultative (total object)",
+                distractors=["ongoing (partitive)", "negated", "habitual only"],
+                note="-n marks a bounded completed object.",
+            ),
+            Example(
+                bridge_text="Luen kirjaa.",
+                gloss_en="I am reading a/the book (not finished).",
+                highlight="kirjaa",
+                prompt="Luen kirjaa uses the partitive because the event is…",
+                answer="unbounded / incomplete",
+                distractors=["fully completed", "impossible in Finnish", "always past tense"],
+                note="Partitive object with present progressive reading.",
+            ),
+            Example(
+                bridge_text="Joisin vettä.",
+                gloss_en="I would drink (some) water.",
+                highlight="vettä",
+                prompt="Mass nouns as objects are typically…",
+                answer="partitive",
+                distractors=["always -n accusative", "illative", "essive"],
+                note="Water is unbounded stuff → partitive.",
+                parallels={"et": "Ma joon vett."},
+            ),
+            Example(
+                bridge_text="Ostin omenan.",
+                gloss_en="I bought an apple (one whole).",
+                highlight="omenan",
+                prompt="A single countable purchase often takes…",
+                answer="total object (-n)",
+                distractors=["partitive only", "abessive", "instructive"],
+                note="Contrast: Ostin omenaa could mean ‘some apple (substance)’.",
+            ),
+        ],
+    ),
+    Pattern(
+        slug="locative-cases",
+        name="Locative cases (internal and external)",
+        family=FAMILY,
+        summary="Internal: -ssa/-sta/-Vn; external: -lla/-lta/-lle for place and many abstract uses.",
+        description=(
+            "Finnish has two parallel place-case series. Internal cases (inessive -ssa, "
+            "elative -sta, illative -Vn) treat the landmark as a container. External cases "
+            "(adessive -lla, ablative -lta, allative -lle) treat it as a surface or vicinity. "
+            "The same endings also mark time, possession (minulla on…), instruments, and more."
+        ),
+        source_note=f"{WIKIBOOKS}, local cases / sijamuodot",
+        difficulty_level=2,
+        examples=[
+            Example(
+                bridge_text="Talossa / talosta / taloon",
+                gloss_en="in the house / out of the house / into the house",
+                highlight="-ssa / -sta / -Vn",
+                prompt="Which series is talossa–talosta–taloon?",
+                answer="internal locatives",
+                distractors=["external locatives", "grammatical cases only", "abessive series"],
+                note="Inessive, elative, illative.",
+                parallels={"et": "majas / majast / majja"},
+            ),
+            Example(
+                bridge_text="Pöydällä / pöydältä / pöydälle",
+                gloss_en="on the table / off the table / onto the table",
+                highlight="-lla / -lta / -lle",
+                prompt="pöydällä–pöydältä–pöydälle belong to which series?",
+                answer="external locatives",
+                distractors=["internal locatives", "partitive triad", "translative only"],
+                note="Adessive, ablative, allative.",
+            ),
+            Example(
+                bridge_text="Minulla on kirja.",
+                gloss_en="I have a book.",
+                highlight="Minulla",
+                prompt="Possession ‘I have’ is typically expressed with…",
+                answer="adessive + olla (minulla on…)",
+                distractors=["nominative subject only", "illative + olla", "abessive + olla"],
+                note="External adessive marks the possessor.",
+                parallels={"et": "Mul on raamat."},
+            ),
+            Example(
+                bridge_text="Kesällä / koulussa",
+                gloss_en="in summer / at school",
+                highlight="Kesällä",
+                prompt="Time expressions like kesällä use which ending family?",
+                answer="often adessive (-lla) or inessive (-ssa)",
+                distractors=["only partitive", "only instructive", "no case marking"],
+                note="Locatives extend beyond physical space.",
+            ),
+        ],
+    ),
+    Pattern(
+        slug="vowel-harmony",
+        name="Vowel harmony",
+        family=FAMILY,
+        summary="Suffix vowels match the stem: back a/o/u vs front ä/ö/y; e/i are neutral.",
+        description=(
+            "Finnish suffixes alternate for vowel harmony. Stems with back vowels (a, o, u) "
+            "take back endings (-ssa, -lla); stems with front vowels (ä, ö, y) take front "
+            "endings (-ssä, -llä). Neutral e and i do not force a series by themselves."
+        ),
+        source_note=f"{WIKIBOOKS}, vowel harmony / vokaaliharmonia",
+        difficulty_level=1,
+        examples=[
+            Example(
+                bridge_text="talossa / metsässä",
+                gloss_en="in the house / in the forest",
+                highlight="-ssa / -ssä",
+                prompt="Why metsässä and not *metsassa?",
+                answer="front harmony (ä/ö/y in the stem)",
+                distractors=["random spelling", "only past tense", "loanword exception only"],
+                note="metsä has ä → front inessive -ssä.",
+                parallels={"et": "metsas (Estonian lacks this harmony)"},
+            ),
+            Example(
+                bridge_text="pöydällä",
+                gloss_en="on the table",
+                highlight="-llä",
+                prompt="pöytä takes -llä rather than -lla because…",
+                answer="ö is a front vowel",
+                distractors=["ö is back", "all tables use -lla", "loan from Swedish"],
+                note="Front stem → front adessive.",
+            ),
+            Example(
+                bridge_text="Helsingissä",
+                gloss_en="in Helsinki",
+                highlight="-ssä",
+                prompt="Helsinki ends in neutral i but uses -ssä. Why?",
+                answer="earlier syllables contain front/e-quality; learned with the name",
+                distractors=["Helsinki is a back stem", "no inessive for cities", "always -ssa"],
+                note="Place names must be learned with their harmony class.",
+            ),
+        ],
+    ),
+    Pattern(
+        slug="negation-and-objects",
+        name="Negation and object case",
+        family=FAMILY,
+        summary="ei conjugates for person; objects under negation are typically partitive.",
+        description=(
+            "Negation uses the defective verb ei plus a connegative form of the main verb "
+            "(en lue, et lue, ei lue). Objects in negative clauses almost always appear in "
+            "the partitive (En lukenut kirjaa), even when the affirmative would take -n."
+        ),
+        source_note=f"{WIKIBOOKS}, negation / kielto",
+        difficulty_level=2,
+        examples=[
+            Example(
+                bridge_text="En lue kirjaa.",
+                gloss_en="I am not reading / do not read the book.",
+                highlight="En … kirjaa",
+                prompt="Under negation, the object kirja appears as…",
+                answer="partitive (kirjaa)",
+                distractors=["kirjan (-n)", "kirjaan (illative)", "kirjalla"],
+                note="Negative clauses prefer partitive objects.",
+            ),
+            Example(
+                bridge_text="Hän ei tullut.",
+                gloss_en="He/she did not come.",
+                highlight="ei tullut",
+                prompt="In the past negative, the main verb is…",
+                answer="past participle (tullut) with ei",
+                distractors=["finite past tuli after ei", "infinitive tulla only", "imperative"],
+                note="ei + participle builds past negation.",
+                parallels={"et": "Ta ei tulnud."},
+            ),
+            Example(
+                bridge_text="Älä mene!",
+                gloss_en="Don't go!",
+                highlight="Älä",
+                prompt="The negative imperative for ‘you (sg)’ uses…",
+                answer="älä + connegative",
+                distractors=["ei + imperative", "en + mene", "epä- prefix only"],
+                note="älä / älkää are the prohibitive forms.",
+            ),
+        ],
+    ),
+]
+
+
+def build() -> list[Pattern]:
+    from common.patterns import DISTRACTOR_COUNT
+
+    for pattern in PATTERNS:
+        answers = [ex.answer for ex in pattern.examples if ex.answer]
+        for example in pattern.examples:
+            if not example.answer or len(example.distractors) >= DISTRACTOR_COUNT:
+                continue
+            for other in answers:
+                if other == example.answer or other in example.distractors:
+                    continue
+                example.distractors.append(other)
+                if len(example.distractors) >= DISTRACTOR_COUNT:
+                    break
+    return PATTERNS

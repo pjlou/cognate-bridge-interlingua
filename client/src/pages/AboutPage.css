@@ -1,0 +1,87 @@
+.about__modifications {
+  padding: 18px 20px;
+  margin-bottom: 30px;
+  background: var(--surface-sunk);
+  border-radius: var(--radius-lg);
+}
+
+.about__modifications p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.about__sources-heading {
+  margin-bottom: 14px;
+}
+
+.source-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.source {
+  padding: 20px 22px;
+}
+
+.source__title {
+  font-size: 1.1rem;
+}
+
+.source__byline {
+  margin: 4px 0 0;
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+
+.source__licence {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 0;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink-faint);
+}
+
+.source__licence a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.source__usage {
+  margin: 0;
+  font-size: 0.89rem;
+  color: var(--ink-soft);
+}
+
+/* The verbatim notice the licence requires preserved, set apart from our own prose. */
+.source__notice {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-left: 2px solid var(--line-strong);
+  background: var(--surface-sunk);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.about__excluded {
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.about__excluded p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.about__home {
+  margin-top: 34px;
+  font-size: 0.88rem;
+}

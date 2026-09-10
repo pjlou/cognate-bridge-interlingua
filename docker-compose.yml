@@ -1,0 +1,24 @@
+# Local development database. Production uses managed Postgres (Neon); this exists so a
+# fresh clone can run `docker compose up -d` and have somewhere to migrate into.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cognate-bridge-interlingua-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cognate_bridge
+    ports:
+      - '5433:5432'
+    volumes:
+      - cognate-bridge-interlingua-pgdata:/var/lib/postgresql/data
+      - ./scripts/init-test-db.sql:/docker-entrypoint-initdb.d/init-test-db.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d cognate_bridge']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  cognate-bridge-interlingua-pgdata:

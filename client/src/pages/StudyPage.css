@@ -1,0 +1,251 @@
+.study__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  margin-bottom: 18px;
+}
+
+.study__band {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.study__band select {
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font: inherit;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.study__skip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.study__hint {
+  margin: 0;
+  flex: 1 1 100%;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.study__hint a {
+  color: inherit;
+}
+
+.study__meter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.study__bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--surface-sunk);
+  overflow: hidden;
+}
+
+.study__bar-fill {
+  height: 100%;
+  background: var(--germanic);
+  transition: width 0.25s ease;
+}
+
+.study-card {
+  padding: 32px 28px 28px;
+}
+
+.study-card__front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 26px;
+  text-align: center;
+}
+
+.study-card__headword {
+  font-size: 2.6rem;
+  letter-spacing: -0.02em;
+}
+
+.study-card__ipa {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  color: var(--ink-faint);
+}
+
+.study-card__back {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.study-card__gloss {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+
+.study-card__synonyms {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.study-card__etymology {
+  margin: 14px 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+
+.study-card__etymology span {
+  font-style: italic;
+}
+
+.study-card__correspondence {
+  padding: 18px 0 4px;
+  border-top: 1px solid var(--line);
+}
+
+.study-card__grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.study-card__grade .btn {
+  padding: 14px 8px;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.study-card__replay {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px auto 0;
+  padding: 6px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.study-card__replay:hover {
+  color: var(--ink);
+  border-color: var(--ink-faint);
+}
+
+.study-card__remove {
+  display: block;
+  margin: 14px auto 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.study-card__remove:hover:not(:disabled) {
+  color: var(--ink);
+}
+
+.study-card__remove:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.study__due-left {
+  white-space: nowrap;
+}
+
+/* Keyboard hints are decoration on a control that already reads correctly. */
+.study-card__kbd {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgb(255 255 255 / 18%);
+  border: 1px solid rgb(255 255 255 / 24%);
+  opacity: 0.85;
+}
+
+.btn--ghost .study-card__kbd,
+.btn:not(.btn--positive):not(.btn--negative) .study-card__kbd {
+  background: rgb(255 255 255 / 14%);
+}
+
+.study-card__cognates {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.study-card__no-cognate {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.study-card__gloss--footer {
+  margin-top: 14px;
+  font-size: 1.15rem;
+}
+
+.study__source {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .study-card__grade {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.study-card__back .sound-laws {
+  margin-top: 16px;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .study-card__grade {
+    grid-template-columns: 1fr;
+  }
+
+  .study-card__headword {
+    font-size: 2rem;
+  }
+}
