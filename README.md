@@ -23,6 +23,16 @@ Grammar gets the same treatment and the same spaced-repetition scheduling as voc
 because shared structure transfers to a real target language more directly than isolated
 words do.
 
+## Why Interlingua
+
+The main version of the project, available at cognate-bridge.vercel.app, focuses on languages
+that have been deemed specifically valuable for efficient language learning that aims to cover
+multiple languages among a given language family.  Interlingua has been used here as a demo as
+it's one of the most widely known international auxiliary languages, and it can be reasonably used
+effectively with the existing infrastructure, despite being less-tailored to this specific use case.
+However, content is still being developed for the live version of the project, and to protect this
+content the infrastructure for the specific languages being used for Cognate Bridge is not released.
+
 ## Architecture
 
 ```
