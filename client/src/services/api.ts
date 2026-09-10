@@ -96,9 +96,57 @@ export interface VocabularyItem {
   is_core_track?: boolean;
   source_ref: string;
   cognates: Cognate[];
+  target_cognate_count?: number;
+  total_cognate_count?: number;
   progress: ProgressSummary | null;
   tier?: StudyTier;
   queue_kind?: 'new' | 'review';
+  /** 'deck' on a card from a user-imported deck rather than the curated bridge content. */
+  source?: 'deck';
+  deck_id?: number;
+  deck_card_id?: number;
+  has_audio?: { english: boolean; bridge: boolean; target: boolean };
+}
+
+export type TargetCoverageFilter = 'all' | 'covered' | 'uncovered';
+
+export interface TargetVocabularyItem {
+  rank: number;
+  lemma: string;
+  gloss_en: string;
+  covered: boolean;
+  has_english_cognate: boolean;
+  target_cognate_count: number;
+  total_cognate_count: number;
+  bridge_code: string;
+  bridge_name: string;
+  bridge_vocabulary_ids: number[];
+  cognates: {
+    language_code: string;
+    language_name: string;
+    word: string;
+    provenance: Provenance;
+    is_bridge: boolean;
+  }[];
+}
+
+export type DeckStatus = 'mapping' | 'translating' | 'ready' | 'failed';
+
+export interface DeckSummary {
+  id: number;
+  owner_user_id: number;
+  bridge_language_id: number | null;
+  bridge_language_code: string | null;
+  target_language_id: number | null;
+  target_language_code: string | null;
+  target_language_name: string | null;
+  name: string;
+  source_filename: string | null;
+  status: DeckStatus;
+  card_count: number;
+  untranslated_count: number;
+  created_at: string;
+  translated_at: string | null;
 }
 
 export interface ProgressSummary {
@@ -411,6 +459,32 @@ export const browseVocabulary = async (
     })
   ).data;
 
+export const browseTargetVocabulary = async (
+  bridgeCode: string,
+  targetCode: string,
+  params: {
+    search?: string;
+    limit?: number;
+    offset?: number;
+    coverage?: TargetCoverageFilter;
+    sort?: 'headword' | 'frequency';
+    englishCognates?: 'all' | 'with' | 'without';
+  } = {},
+): Promise<{ items: TargetVocabularyItem[]; total: number }> =>
+  (
+    await api.get(`/bridges/${bridgeCode}/target-vocabulary`, {
+      params: {
+        target: targetCode,
+        search: params.search,
+        limit: params.limit,
+        offset: params.offset,
+        coverage: params.coverage,
+        sort: params.sort,
+        english_cognates: params.englishCognates,
+      },
+    })
+  ).data;
+
 export const getVocabularyItem = async (id: number): Promise<VocabularyItem> =>
   (await api.get(`/vocabulary/${id}`)).data;
 
@@ -519,5 +593,152 @@ export const synthesizeTts = async (body: {
       responseType: 'blob',
     })
   ).data;
+
+// ---------------------------------------------------------------------------------
+// Decks (imported Anki decks) -- see server/src/routes/decks.ts
+// ---------------------------------------------------------------------------------
+
+export const listDecks = async (): Promise<DeckSummary[]> => (await api.get('/decks')).data;
+
+export const getDeck = async (deckId: number): Promise<DeckSummary> =>
+  (await api.get(`/decks/${deckId}`)).data;
+
+export interface ApkgImportPreview {
+  deckId: number;
+  noteType: string;
+  fieldNames: string[];
+  sampleRows: Record<string, string>[];
+  noteCount: number;
+  skippedNoteTypeCount: number;
+  mediaWarning: string | null;
+}
+
+export const importApkg = async (file: File): Promise<ApkgImportPreview> => {
+  const form = new FormData();
+  form.append('file', file);
+  return (
+    await api.post('/decks/import', form, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    })
+  ).data;
+};
+
+export interface DeckFieldMapping {
+  englishText: string;
+  englishAudio?: string | null;
+  targetText: string;
+  targetAudio?: string | null;
+}
+
+/**
+ * This build supports Interlingua-only deck imports (no bridge picker), so `bridgeCode`
+ * is narrowed to the literal 'ia' rather than a multi-bridge union type -- there is no
+ * other-bridge (or Finnish) deck-import path here.
+ */
+export const confirmDeckMapping = async (
+  deckId: number,
+  bridgeCode: 'ia',
+  targetLanguageCode: string,
+  fieldMapping: DeckFieldMapping,
+): Promise<{ cardCount: number }> =>
+  (
+    await api.post(`/decks/${deckId}/confirm-mapping`, {
+      bridgeCode,
+      targetLanguageCode,
+      fieldMapping,
+    })
+  ).data;
+
+/**
+ * Kept for API parity with the server route even though nothing in this build's UI
+ * calls it -- there is no Interlingua translation engine here, so DeckDetailPage shows
+ * the Translate action disabled rather than wiring it up. See TranslatePage.
+ */
+export const translateDeck = async (deckId: number): Promise<{ status: string }> =>
+  (await api.post(`/decks/${deckId}/translate`)).data;
+
+export const deleteDeck = async (deckId: number): Promise<void> => {
+  await api.delete(`/decks/${deckId}`);
+};
+
+async function downloadAuthed(path: string, filename: string): Promise<void> {
+  const response = await api.get(path, { responseType: 'blob' });
+  const url = URL.createObjectURL(response.data as Blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+export const downloadDeckExport = (deckId: number, deckName: string): Promise<void> =>
+  downloadAuthed(`/decks/${deckId}/export.txt`, `${deckName || 'deck'}.txt`);
+
+export const downloadUntranslatedWords = (deckId: number, deckName: string): Promise<void> =>
+  downloadAuthed(
+    `/decks/${deckId}/export/untranslated.txt`,
+    `${deckName || 'deck'}-untranslated.txt`,
+  );
+
+/**
+ * A full JSON backup of the deck -- every card field, its audio, and the caller's own
+ * SRS history -- meant for moving the deck (with edits and study progress) to another
+ * account or install. See server/src/services/deckExport.ts's `buildDeckBackup`.
+ */
+export const downloadDeckBackup = (deckId: number, deckName: string): Promise<void> =>
+  downloadAuthed(`/decks/${deckId}/export/backup.json`, `${deckName || 'deck'}-backup.json`);
+
+export interface DeckDueCounts {
+  new: number;
+  review: number;
+  vocabulary: number;
+}
+
+export const getDeckStudyQueue = async (
+  deckId: number,
+  options: { limit?: number } = {},
+): Promise<VocabularyItem[]> =>
+  (
+    await api.get(`/decks/${deckId}/study`, {
+      params: {
+        limit: options.limit ?? 20,
+      },
+    })
+  ).data;
+
+export const getDeckDueCounts = async (deckId: number): Promise<DeckDueCounts> =>
+  (await api.get(`/decks/${deckId}/due`)).data;
+
+export const recordDeckCardReview = async (
+  deckCardId: number,
+  grade: VocabularyGrade,
+  tier: StudyTier,
+): Promise<ReviewResult> =>
+  (await api.post(`/deck-cards/${deckCardId}/review`, { grade, tier })).data;
+
+export const setDeckCardRemoved = async (
+  deckCardId: number,
+  tier: StudyTier,
+  removed: boolean,
+): Promise<ProgressSummary & { message: string }> =>
+  (await api.post(`/deck-cards/${deckCardId}/removed`, { tier, removed })).data;
+
+export type DeckAudioField = 'english' | 'bridge' | 'target';
+
+export const getDeckCardAudio = async (
+  deckCardId: number,
+  field: DeckAudioField,
+): Promise<Blob> =>
+  (await api.get(`/deck-cards/${deckCardId}/audio/${field}`, { responseType: 'blob' })).data;
+
+export const saveBridgeAudio = async (deckCardId: number, audio: Blob): Promise<void> => {
+  const form = new FormData();
+  form.append('audio', audio, 'recording.webm');
+  await api.post(`/deck-cards/${deckCardId}/bridge-audio`, form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  });
+};
 
 export default api;

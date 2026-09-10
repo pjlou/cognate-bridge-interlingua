@@ -107,6 +107,50 @@ describe('GamesPage', () => {
     expect(screen.getByRole('button', { name: 'Pause' })).toBeInTheDocument();
   });
 
+  it('swaps the hint language onto bridge tiles and reveals the bridge word on pause', async () => {
+    const items = Array.from({ length: 24 }, (_, i) =>
+      vocabularyItem({
+        id: i + 1,
+        bridge_language_code: 'ia',
+        headword: `ia${i}`,
+        gloss_en: `g${i}`,
+        frequency_rank: i + 1,
+        cognates: [
+          {
+            id: i + 100,
+            target_language: { id: 9, code: 'it', name: 'Italian', family: 'Romance' },
+            target_word: `it${i}`,
+            provenance: 'parsed',
+            confidence: 1,
+            validated_against: null,
+            notes: null,
+            rule: null,
+            rules: [],
+          },
+        ],
+      }),
+    );
+    mock.onGet(/\/bridges\/ia\/parts-of-speech/).reply(200, ['n', 'v']);
+    mock.onGet(/\/bridges\/ia\/game-lemmas/).reply(200, items);
+
+    renderGames('/b/ia/games');
+    await userEvent.selectOptions(await screen.findByLabelText('Hint reveal'), 'it');
+    await userEvent.click(screen.getByLabelText('Swap hint reveal with bridge language'));
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Start' })).toBeEnabled());
+    await userEvent.click(screen.getByRole('button', { name: 'Start' }));
+    await waitFor(() => expect(screen.getByRole('button', { name: "I don't know this word" })).toBeInTheDocument(), {
+      timeout: 4000,
+    });
+
+    expect(screen.getAllByText(/^it\d+$/).length).toBeGreaterThan(0);
+    const bridgeTile = screen
+      .getAllByRole('gridcell')
+      .find((cell) => cell.className.includes('games-tile--side-bridge'));
+    expect(bridgeTile).toBeDefined();
+    await userEvent.click(bridgeTile!);
+    expect(screen.getByRole('button', { name: /^ia\d+$/ })).toBeInTheDocument();
+  });
+
   it('shows matching-game aggregates on an empty stats store', async () => {
     mock.onGet(/\/bridges\/ia\/parts-of-speech/).reply(200, []);
     mock.onGet(/\/bridges\/ia\/game-lemmas/).reply(200, []);

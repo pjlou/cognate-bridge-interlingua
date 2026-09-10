@@ -1,4 +1,4 @@
-import { Globe2, Info, LogOut } from 'lucide-react';
+import { FolderUp, Globe2, Info, LogOut } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -159,6 +159,13 @@ export default function AppShell() {
           <NavLink to="/targets" className="masthead__link">
             <Globe2 size={15} aria-hidden="true" />
             {t('nav.targets')}
+          </NavLink>
+          <NavLink to="/translate" className="masthead__link">
+            {t('nav.translate')}
+          </NavLink>
+          <NavLink to="/decks/import" className="masthead__link">
+            <FolderUp size={15} aria-hidden="true" />
+            My decks
           </NavLink>
           <NavLink to="/about" className="masthead__link" title={t('nav.about')}>
             <Info size={15} aria-hidden="true" />

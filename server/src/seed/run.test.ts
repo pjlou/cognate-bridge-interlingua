@@ -135,16 +135,19 @@ describe.skipIf(!canRun)('seed', () => {
     }
   });
 
-  it('loads at least four sound-correspondence rule cards with examples', async () => {
+  it('loads at least two sound-correspondence rule cards with examples', async () => {
+    // Only the two Romance-internal cards (c-palatalization, prosthetic-s) apply to
+    // this repo's bridges; the Germanic/Latin-vs-Germanic cards were Frenkisch-specific
+    // and were dropped along with it. See docs/sound-correspondence-rule-cards.md.
     const cards = await query<{ count: number }>(
       `SELECT COUNT(*)::int AS count FROM rule_cards`,
     );
-    expect(cards[0]!.count).toBeGreaterThanOrEqual(4);
+    expect(cards[0]!.count).toBeGreaterThanOrEqual(2);
 
     const withExamples = await query<{ count: number }>(
       `SELECT COUNT(DISTINCT rule_card_id)::int AS count FROM rule_card_examples`,
     );
-    expect(withExamples[0]!.count).toBeGreaterThanOrEqual(4);
+    expect(withExamples[0]!.count).toBeGreaterThanOrEqual(2);
   });
 
   it('never attaches a cognate in a language its bridge does not target', async () => {

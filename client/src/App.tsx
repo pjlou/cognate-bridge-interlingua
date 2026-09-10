@@ -7,6 +7,8 @@ import AboutPage from './pages/AboutPage';
 import AuthPage from './pages/AuthPage';
 import BrowsePage from './pages/BrowsePage';
 import CardsPage from './pages/CardsPage';
+import DeckDetailPage from './pages/DeckDetailPage';
+import DeckImportPage from './pages/DeckImportPage';
 import GamesPage from './pages/GamesPage';
 import GrammarDrillPage from './pages/GrammarDrillPage';
 import GrammarListPage from './pages/GrammarListPage';
@@ -16,6 +18,7 @@ import RuleCardsPage from './pages/RuleCardsPage';
 import StatsPage from './pages/StatsPage';
 import StudyPage from './pages/StudyPage';
 import TargetsPage from './pages/TargetsPage';
+import TranslatePage from './pages/TranslatePage';
 
 export default function App() {
   const { user, isLoading } = useAuth();
@@ -45,6 +48,9 @@ export default function App() {
       <Route element={<AppShell />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/targets" element={<TargetsPage />} />
+        <Route path="/translate" element={<TranslatePage />} />
+        <Route path="/decks/import" element={<DeckImportPage />} />
+        <Route path="/decks/:id" element={<DeckDetailPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/rules" element={<RuleCardsPage />} />
         <Route path="/rules/:slug" element={<RuleCardDrillPage />} />

@@ -1,0 +1,27 @@
+.deck-import {
+  max-width: 640px;
+}
+
+.deck-import__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.deck-import__button {
+  align-self: flex-start;
+}
+
+.deck-import__spin {
+  animation: spin 0.8s linear infinite;
+}
+
+.deck-import__sample {
+  margin-top: 6px;
+  padding: 6px 9px;
+  border-radius: var(--radius);
+  background: var(--surface-sunk);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  overflow-wrap: break-word;
+}

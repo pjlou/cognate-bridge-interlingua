@@ -17,9 +17,17 @@ describe('bridgesForTarget', () => {
   it('returns every non-experimental bridge that lists the target', () => {
     expect(bridgesForTarget('es')).toEqual(['ia']);
     expect(bridgesForTarget('fr')).toEqual(['ia']);
-    expect(bridgesForTarget('ro')).toEqual(['ia']);
+    expect(bridgesForTarget('it')).toEqual(['ia']);
+    expect(bridgesForTarget('pt')).toEqual(['ia']);
     expect(bridgesForTarget('de')).toEqual([]);
     expect(bridgesForTarget('ca')).toEqual([]);
+  });
+
+  it("excludes Romanian from Interlingua's coverage scoring even though ia targets it", () => {
+    // ia's real target list (BRIDGE_TARGETS) includes 'ro', but IEDICT -- the
+    // source dictionary ia's cognates are derived from -- never drew from Romanian,
+    // so scoring coverage against it would be meaningless.
+    expect(bridgesForTarget('ro')).toEqual([]);
   });
 });
 

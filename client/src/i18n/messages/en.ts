@@ -8,6 +8,7 @@ export const en = {
   'nav.grammar': 'Grammar',
   'nav.rules': 'Rules',
   'nav.targets': 'Targets',
+  'nav.translate': 'Translate',
   'nav.about': 'Sources and credits',
   'nav.signOut': 'Sign out',
   'nav.primary': 'Primary',

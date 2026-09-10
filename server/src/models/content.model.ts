@@ -1,4 +1,8 @@
 import { query, queryOne } from '../db.js';
+import { loadLanguageRanks } from '../seed/frequency.js';
+import { normalizeCoverageLemma, COVERAGE_HORIZON } from '../lib/targetCoverage.js';
+import { closedClassSet } from '../lib/closedClassLemmas.js';
+import { targetEnglishFallback } from '../lib/targetEnglishFallback.js';
 import {
   isExperimentalBridgeEnabled,
   isExperimentalTargetVisible,
@@ -30,6 +34,220 @@ type VocabularyRow = Omit<VocabularyItem, 'cognates' | 'progress'>;
 
 export type BrowseSort = 'headword' | 'frequency';
 export type EnglishCognateFilter = 'all' | 'with' | 'without';
+
+export interface TargetVocabularyItem {
+  rank: number;
+  lemma: string;
+  gloss_en: string;
+  covered: boolean;
+  has_english_cognate: boolean;
+  target_cognate_count: number;
+  total_cognate_count: number;
+  bridge_code: string;
+  bridge_name: string;
+  bridge_vocabulary_ids: number[];
+  cognates: {
+    language_code: string;
+    language_name: string;
+    word: string;
+    provenance: string;
+    is_bridge: boolean;
+  }[];
+}
+
+export type TargetCoverageFilter = 'all' | 'covered' | 'uncovered';
+
+/**
+ * A curated, frequency-ranked dictionary for one of a bridge's target languages: the
+ * first `COVERAGE_HORIZON` content lemmas plus closed-class function words, each marked
+ * with whether this bridge attests a cognate for it (and which cognates exist across
+ * every target, not just the bridge).
+ */
+export async function browseTargetVocabulary(
+  bridgeCode: string,
+  targetCode: string,
+  options: {
+    search?: string;
+    limit: number;
+    offset: number;
+    coverage?: TargetCoverageFilter;
+    sort?: BrowseSort;
+    englishCognates?: EnglishCognateFilter;
+    selectedTargetCodes?: string[];
+  },
+): Promise<{ items: TargetVocabularyItem[]; total: number }> {
+  const ranks = loadLanguageRanks(targetCode);
+  if (!ranks) return { items: [], total: 0 };
+
+  const bridge = await queryOne<{ id: number; name: string }>(
+    'SELECT id, name FROM bridge_languages WHERE code = $1',
+    [bridgeCode],
+  );
+  if (!bridge) return { items: [], total: 0 };
+
+  const linked = await queryOne<{ exists: boolean }>(
+    `SELECT EXISTS (
+       SELECT 1 FROM bridge_target_links l
+       JOIN target_languages t ON t.id = l.target_language_id
+       WHERE l.bridge_language_id = $1 AND t.code = $2
+     ) AS exists`,
+    [bridge.id, targetCode],
+  );
+  if (!linked?.exists) return { items: [], total: 0 };
+
+  const rankedCandidates = [...ranks.entries()]
+    .sort((a, b) => (options.sort === 'headword' ? a[0].localeCompare(b[0]) : a[1] - b[1]) || a[0].localeCompare(b[0]))
+    .map(([lemma, rank]) => ({ lemma, rank }));
+  const closed = new Set(
+    [...(closedClassSet(targetCode) ?? new Set<string>())].map((lemma) =>
+      normalizeCoverageLemma(lemma),
+    ),
+  );
+  const searchTerm = options.search ? normalizeCoverageLemma(options.search) : null;
+  const candidateWords = [
+    ...rankedCandidates.filter((item) => closed.has(normalizeCoverageLemma(item.lemma))),
+    ...rankedCandidates
+      .filter((item) => !closed.has(normalizeCoverageLemma(item.lemma)))
+      .slice(0, COVERAGE_HORIZON),
+  ]
+    .filter((item) => !searchTerm || normalizeCoverageLemma(item.lemma).includes(searchTerm))
+    .map((item) => normalizeCoverageLemma(item.lemma));
+
+  const targetRows = await query<{
+    bridge_vocabulary_id: number;
+    target_word: string;
+    bridge_word: string;
+    gloss_en: string;
+    bridge_code: string;
+    bridge_name: string;
+    target_code: string;
+    target_name: string;
+    provenance: string;
+  }>(
+    `SELECT c.bridge_vocabulary_id, c.target_word, v.headword AS bridge_word, v.gloss_en,
+            b.code AS bridge_code, b.name AS bridge_name,
+            t.code AS target_code, t.name AS target_name, c.provenance
+       FROM cognate_correspondences c
+       JOIN bridge_vocabulary v ON v.id = c.bridge_vocabulary_id
+       JOIN bridge_languages b ON b.id = v.bridge_language_id
+       JOIN target_languages t ON t.id = c.target_language_id
+      WHERE b.code = $1 AND t.code = $2
+        AND LOWER(c.target_word) = ANY($3::text[])`,
+    [bridgeCode, targetCode, candidateWords],
+  );
+  const sourceIds = [...new Set(targetRows.map((row) => row.bridge_vocabulary_id))];
+  const rows = sourceIds.length === 0
+    ? []
+    : await query<typeof targetRows[number]>(
+        `SELECT c.bridge_vocabulary_id, c.target_word, v.headword AS bridge_word, v.gloss_en,
+                b.code AS bridge_code, b.name AS bridge_name,
+                t.code AS target_code, t.name AS target_name, c.provenance
+           FROM cognate_correspondences c
+           JOIN bridge_vocabulary v ON v.id = c.bridge_vocabulary_id
+           JOIN bridge_languages b ON b.id = v.bridge_language_id
+           JOIN target_languages t ON t.id = c.target_language_id
+          WHERE c.bridge_vocabulary_id = ANY($1::int[])`,
+        [sourceIds],
+      );
+  type TargetAggregate = {
+    gloss_en: string;
+    bridge_code: string;
+    bridge_name: string;
+    bridge_vocabulary_ids: number[];
+    cognates: TargetVocabularyItem['cognates'];
+  };
+  const byLemma = new Map<string, TargetAggregate>();
+  const bySource = new Map<number, typeof rows>();
+  for (const row of rows) {
+    bySource.set(row.bridge_vocabulary_id, [...(bySource.get(row.bridge_vocabulary_id) ?? []), row]);
+  }
+  for (const sourceRows of bySource.values()) {
+    const targetRow = sourceRows.find((row) => row.target_code === targetCode);
+    if (!targetRow) continue;
+    const key = normalizeCoverageLemma(targetRow.target_word);
+    const existing = byLemma.get(key) ?? {
+      gloss_en: targetRow.gloss_en,
+      bridge_code: targetRow.bridge_code,
+      bridge_name: targetRow.bridge_name,
+      bridge_vocabulary_ids: [],
+      cognates: [],
+    };
+    existing.bridge_vocabulary_ids.push(...sourceRows
+      .map((row) => row.bridge_vocabulary_id)
+      .filter((id) => !existing.bridge_vocabulary_ids.includes(id)));
+    const bridgeKey = `${targetRow.bridge_code}:${targetRow.bridge_word}`;
+    if (!existing.cognates.some((item) => `${item.language_code}:${item.word}` === bridgeKey)) {
+      existing.cognates.push({
+        language_code: targetRow.bridge_code,
+        language_name: targetRow.bridge_name,
+        word: targetRow.bridge_word,
+        provenance: targetRow.provenance,
+        is_bridge: true,
+      });
+    }
+    for (const row of sourceRows) {
+      const targetKey = `${row.target_code}:${row.target_word}`;
+      if (existing.cognates.some((item) => `${item.language_code}:${item.word}` === targetKey)) continue;
+      existing.cognates.push({
+        language_code: row.target_code,
+        language_name: row.target_name,
+        word: row.target_word,
+        provenance: row.provenance,
+        is_bridge: false,
+      });
+    }
+    byLemma.set(key, existing);
+  }
+
+  const allRanked = rankedCandidates;
+  const functionWords = allRanked.filter((item) => closed.has(normalizeCoverageLemma(item.lemma)));
+  const contentWords = allRanked
+    .filter((item) => !closed.has(normalizeCoverageLemma(item.lemma)))
+    .slice(0, COVERAGE_HORIZON);
+  const ranked = [...functionWords, ...contentWords]
+    .map(({ lemma, rank }) => ({
+      rank,
+      lemma,
+      ...(byLemma.get(normalizeCoverageLemma(lemma)) ?? {
+        gloss_en: targetEnglishFallback(targetCode, lemma) ?? lemma,
+        bridge_code: bridgeCode,
+        bridge_name: bridge.name,
+        bridge_vocabulary_ids: [],
+        cognates: [],
+      }),
+    }))
+    .filter((item) => !options.search || normalizeCoverageLemma(item.lemma).includes(normalizeCoverageLemma(options.search)))
+    .map((item) => ({
+      ...item,
+      covered: item.cognates.some((cognate) => cognate.is_bridge),
+      has_english_cognate: item.cognates.some((cognate) => cognate.language_code === 'en'),
+      target_cognate_count: new Set(
+        item.cognates
+          .filter((cognate) => !cognate.is_bridge && (options.selectedTargetCodes ?? []).includes(cognate.language_code))
+          .map((cognate) => cognate.language_code),
+      ).size,
+      total_cognate_count: new Set(
+        item.cognates.filter((cognate) => !cognate.is_bridge).map((cognate) => cognate.language_code),
+      ).size,
+    }))
+    .filter((item) => {
+      if (options.englishCognates === 'with') return item.has_english_cognate;
+      if (options.englishCognates === 'without') return !item.has_english_cognate;
+      return true;
+    })
+    .filter((item) => {
+      if (!options.coverage || options.coverage === 'all') return true;
+      return options.coverage === 'covered' ? item.covered : !item.covered;
+    });
+
+  return {
+    total: ranked.length,
+    items: ranked.slice(options.offset, options.offset + options.limit).map((item) => ({
+      ...item,
+      covered: item.covered,
+    })),
+  };
+}
 
 function experimentalAllowlist(): Set<string> {
   return parseExperimentalBridgeAllowlist();

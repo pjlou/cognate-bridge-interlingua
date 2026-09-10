@@ -169,19 +169,36 @@ function pickSlotForSide(
 function layoutInitialBoard(
   enTiles: BoardTile[],
   bridgeTiles: BoardTile[],
-  centerTile: BoardTile,
+  unpairedTile: BoardTile,
   random: () => number,
 ): BoardTile[] {
   const tiles: BoardTile[] = new Array(9);
   const shuffledEn = shuffle(enTiles, random);
   const shuffledBridge = shuffle(bridgeTiles, random);
-  EN_SLOTS.forEach((slot, index) => {
-    tiles[slot] = shuffledEn[index]!;
-  });
-  BRIDGE_SLOTS.forEach((slot, index) => {
-    tiles[slot] = shuffledBridge[index]!;
-  });
-  tiles[CENTER_SLOT] = centerTile;
+  const eligibleSlots = BOARD_SLOT_SIDES.map((_, slot) => slot).filter((slot) =>
+    slotAllowsSide(slot, unpairedTile.side),
+  );
+  const unpairedSlot = eligibleSlots[Math.floor(random() * eligibleSlots.length)]!;
+  tiles[unpairedSlot] = unpairedTile;
+
+  const remainingEn = shuffledEn.slice();
+  const remainingBridge = shuffledBridge.slice();
+  const place = (slot: number, side: Exclude<TileSide, 'empty'>): void => {
+    const source = side === 'en' ? remainingEn : remainingBridge;
+    tiles[slot] = source.shift()!;
+  };
+
+  // If the unmatched tile takes an exact-side slot, the center supplies the
+  // missing slot for that same side. Otherwise the center stays available for
+  // the unmatched tile and all paired tiles use their exact-side slots.
+  if (unpairedSlot === CENTER_SLOT) {
+    EN_SLOTS.forEach((slot) => place(slot, 'en'));
+    BRIDGE_SLOTS.forEach((slot) => place(slot, 'bridge'));
+  } else {
+    EN_SLOTS.filter((slot) => slot !== unpairedSlot).forEach((slot) => place(slot, 'en'));
+    BRIDGE_SLOTS.filter((slot) => slot !== unpairedSlot).forEach((slot) => place(slot, 'bridge'));
+    place(CENTER_SLOT, unpairedTile.side === 'en' ? 'en' : 'bridge');
+  }
   return tiles;
 }
 
@@ -203,16 +220,15 @@ export function createMatchingEngine(
   for (const lemma of pairLemmas) consume(remaining, lemma.id);
   consume(remaining, unpaired.id);
 
-  // Center holds the unpaired half; its side decides whether center is EN or target.
   const unpairedSide: TileSide = random() < 0.5 ? 'en' : 'bridge';
   const enTiles = pairLemmas.map((lemma) => makeTile(lemma, 'en'));
   const bridgeTiles = pairLemmas.map((lemma) => makeTile(lemma, 'bridge'));
-  const centerTile = makeTile(unpaired, unpairedSide);
+  const unpairedTile = makeTile(unpaired, unpairedSide);
 
   return {
     lemmas,
     remaining,
-    tiles: layoutInitialBoard(enTiles, bridgeTiles, centerTile, random),
+    tiles: layoutInitialBoard(enTiles, bridgeTiles, unpairedTile, random),
     unpairedLemmaId: unpaired.id,
     unpairedSide,
     successfulMatches: 0,

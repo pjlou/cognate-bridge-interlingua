@@ -147,11 +147,14 @@ describe.skipIf(!hasTestDatabase)('schema constraints', () => {
     });
 
     it('still rejects a genuine duplicate', async () => {
+      // 'domo'/'n' is already seeded by beforeEach (as vocabId) with the default
+      // homograph_index -- inserting the same headword/part-of-speech/homograph_index
+      // combination again should collide with it.
       await expect(
         query(
           `INSERT INTO bridge_vocabulary
              (bridge_language_id, headword, part_of_speech, gloss_en, source_ref)
-           VALUES ($1, 'haus', 'n', 'house', 'Wordbouk p. 34')`,
+           VALUES ($1, 'domo', 'n', 'house', 'IEDICT 2019')`,
           [bridgeId],
         ),
       ).rejects.toThrow();

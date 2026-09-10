@@ -38,8 +38,10 @@ import CorrespondencePanel, { SoundLawStack } from '../components/Correspondence
 import {
   ROMANCE_HINT_LANGS,
   readHintRevealPref,
+  readHintRevealSwap,
   resolveHintReveal,
   writeHintRevealPref,
+  writeHintRevealSwap,
   type HintRevealPref,
 } from '../lib/matchHintReveal';
 import { partOfSpeechLabel, groupPartsOfSpeechForGame, normalizeGamePosFilter } from '../lib/partOfSpeech';
@@ -168,6 +170,7 @@ export default function GamesPage() {
   const [hintRevealPref, setHintRevealPref] = useState<HintRevealPref>(() =>
     readHintRevealPref(bridge),
   );
+  const [hintRevealSwap, setHintRevealSwap] = useState(() => readHintRevealSwap(bridge));
   const [lemmaCount, setLemmaCount] = useState(18);
   const [englishCognates, setEnglishCognates] = useState<EnglishCognateFilter>(readCognateFilter);
   const [partOfSpeech, setPartOfSpeech] = useState(readPosFilter);
@@ -225,6 +228,7 @@ export default function GamesPage() {
 
   useEffect(() => {
     setHintRevealPref(readHintRevealPref(bridge));
+    setHintRevealSwap(readHintRevealSwap(bridge));
   }, [bridge]);
 
   function activePausedMs(now = performance.now()): number {
@@ -796,11 +800,21 @@ export default function GamesPage() {
     if (tile.side === 'bridge') {
       const lemma = eng.lemmas.get(tile.lemmaId);
       if (lemma) {
+        let speechText = lemma.headword;
+        let speechVoiceLang: HintRevealPref = 'off';
+        if (hintRevealSwap && hintRevealPref !== 'off') {
+          const resolution = resolveHintReveal(lemma, hintRevealPref);
+          if (resolution.kind === 'peek') {
+            speechText = resolution.text;
+            speechVoiceLang = hintRevealPref;
+          }
+        }
         void speakBridgeWord({
-          text: lemma.headword,
+          text: speechText,
           bridgeCode: lemma.bridge_language_code || bridge,
-          ipa: lemma.ipa,
-          ipaSource: lemma.ipa_source,
+          voiceLang: speechVoiceLang === 'off' ? undefined : speechVoiceLang,
+          ipa: speechVoiceLang === 'off' ? lemma.ipa : undefined,
+          ipaSource: speechVoiceLang === 'off' ? lemma.ipa_source : undefined,
         });
       }
     }
@@ -975,10 +989,22 @@ export default function GamesPage() {
     if (!tile || !engine) return 'Pause';
     const lemma = engine.lemmas.get(tile.lemmaId);
     if (!lemma) return 'Pause';
+    if (hintRevealSwap) return lemma.headword;
     const resolution = resolveHintReveal(lemma, hintRevealPref);
     if (resolution.kind === 'peek') return resolution.text;
     if (resolution.kind === 'missing') return 'no cognate';
     return 'Pause';
+  }
+
+  function tileDisplayText(tile: BoardTile): string {
+    if (hintRevealSwap && hintRevealPref !== 'off' && tile.side === 'bridge' && engine) {
+      const lemma = engine.lemmas.get(tile.lemmaId);
+      if (lemma) {
+        const resolution = resolveHintReveal(lemma, hintRevealPref);
+        if (resolution.kind === 'peek') return resolution.text;
+      }
+    }
+    return tile.text;
   }
 
   const aggregates = aggregateGameStats(stats);
@@ -1071,6 +1097,21 @@ export default function GamesPage() {
                   </option>
                 ))}
               </select>
+            </label>
+          )}
+          {bridge === 'ia' && hintRevealPref !== 'off' && (
+            <label className="games-setup__check">
+              <input
+                type="checkbox"
+                aria-label="Swap hint reveal with bridge language"
+                checked={hintRevealSwap}
+                onChange={(event) => {
+                  const next = event.target.checked;
+                  setHintRevealSwap(next);
+                  writeHintRevealSwap(bridge, next);
+                }}
+              />
+              <span>Swap hint reveal with bridge language</span>
             </label>
           )}
           <label className="games-setup__field">
@@ -1234,7 +1275,7 @@ export default function GamesPage() {
                     disabled={isInactive || actionBusy || isPaused}
                     aria-hidden={isVacant || undefined}
                   >
-                    {!isVacant && <span className="games-tile__text">{tile.text}</span>}
+                    {!isVacant && <span className="games-tile__text">{tileDisplayText(tile)}</span>}
                   </button>
                 );
               })}

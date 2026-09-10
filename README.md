@@ -161,6 +161,44 @@ ENABLE_EXPERIMENTAL_BRIDGES=fin
 Without that env var, `GET /api/bridges` omits `fin` and `GET /api/targets` omits `et`,
 even if the rows exist in Postgres. Direct `/b/fin/...` routes also return 404.
 
+## Translation
+
+There is **no Interlingua translation engine in this build** — not on the `/translate`
+page, not for Anki deck import, not anywhere. `main`'s translate feature is a
+from-scratch rule-based English-to-bridge grammar engine, hand-built around each
+invented conlang's own grammar (a genuine parse → transfer → generate pipeline, not a
+call to an external service). That approach fits a conlang whose grammar the project's
+maintainers wrote themselves; replicating it for a real language like Interlingua is a
+much bigger and more error-prone undertaking, so it was not attempted here.
+
+No ready-to-use Interlingua translation service was found either. The closest existing
+building blocks, if you want to build your own:
+
+- [Apertium's Interlingua translation pairs](https://github.com/apertium/apertium-eng-ina)
+  (GPL v3) cover English, Spanish, French and Portuguese ↔ Interlingua as open-source
+  linguistic data — dictionaries and transfer rules, not a running service. There is no
+  Apertium pair for Italian, and no hosted Apertium instance includes Interlingua; you'd
+  need to compile these with Apertium's own toolchain and host the result yourself.
+- A small, independently-built
+  [neural English–Interlingua translator](https://github.com/JasonXu314/translator)
+  exists as a hobby project, trained on a narrow religious-text corpus. Its licensing and
+  reliability haven't been verified for this project, and it uses a different stack
+  (Python/PyTorch) than this app's Node/TypeScript services — worth a look, but not a
+  drop-in.
+
+Anki deck import (below) works without a translator — you can upload, map fields,
+download, and back up a deck — but the "Translate" step that would generate bridge-
+language cards is disabled with this same notice, since it would otherwise always fail.
+
+## Anki deck import
+
+Signed-in users can import their own Anki decks (`/decks/import`, a `.apkg` file), map
+which fields are English/target-language text and audio, and study the result with the
+same spaced-repetition scheduler used for built-in vocabulary. Imported decks are scoped
+to Interlingua only in this build. Downloads are available at every stage: an
+Anki-importable `.txt`, an untranslated-words list, and a full JSON backup including your
+own review progress.
+
 ## Local TTS with Piper (not recommended)
 
 The browser can typically handle text to speech reliably.  

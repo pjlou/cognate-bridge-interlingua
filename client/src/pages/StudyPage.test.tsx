@@ -51,6 +51,9 @@ beforeEach(() => {
   resetCloudTtsCache();
   mock.onGet('/auth/me').reply(401);
   mock.onGet('/tts/status').reply(200, { cloud: false, local: false, available: false });
+  // StudyPage always fetches the learner's decks to populate the deck picker; none of
+  // these tests exercise deck mode, so an empty list keeps them in the non-deck path.
+  mock.onGet('/decks').reply(200, []);
   vi.stubGlobal('SpeechSynthesisUtterance', FakeUtterance);
   vi.stubGlobal('speechSynthesis', {
     speak: vi.fn(),
@@ -307,7 +310,13 @@ describe('StudyPage', () => {
 
     renderStudy();
 
-    expect(await screen.findByRole('heading', { name: 'Nothing due in this band' })).toBeInTheDocument();
+    // Re-queries (and re-checks attachment) on every retry rather than resolving once
+    // with a node reference that a later, still-settling fetch could detach before the
+    // assertion runs -- this page mounts several independent async fetches (bands,
+    // decks, due, queue) and they don't all resolve in the same tick.
+    await waitFor(() => {
+      expect(screen.getByRole('heading', { name: 'Nothing due in this band' })).toBeInTheDocument();
+    });
     expect(screen.getByRole('link', { name: /grammar pattern/ })).toBeInTheDocument();
   });
 

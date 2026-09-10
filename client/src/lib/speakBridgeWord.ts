@@ -13,6 +13,7 @@ export type IpaSource = 'direct_phonology' | 'derived_phonology' | 'uncertain_ph
 export interface SpeakBridgeWordInput {
   text: string;
   bridgeCode: string;
+  voiceLang?: StandInVoiceLang;
   ipa?: string | null;
   ipaSource?: IpaSource | null;
 }
@@ -174,9 +175,12 @@ export function pickVoice(
   voices: SpeechSynthesisVoice[],
   bridgeCode: string,
   headword?: string,
+  voiceLang?: StandInVoiceLang,
 ): SpeechSynthesisVoice | null {
   const tags =
-    headword !== undefined && headword.trim() !== ''
+    voiceLang
+      ? tagsForLang(voiceLang)
+      : headword !== undefined && headword.trim() !== ''
       ? preferredLangTagsForWord(bridgeCode, headword)
       : preferredLangTags(bridgeCode);
 
@@ -291,7 +295,7 @@ async function speakWithBrowser(input: SpeakBridgeWordInput): Promise<SpeakResul
   }
 
   const voices = await loadVoices();
-  const voice = pickVoice(voices, input.bridgeCode, headword);
+  const voice = pickVoice(voices, input.bridgeCode, headword, input.voiceLang);
   if (!voice) {
     // Preferred voice(s) flagged and no fallback voice installed — still try a clip.
     const correction = await findCorrectionAudioUrl(input.bridgeCode, headword);
@@ -313,7 +317,12 @@ async function speakWithBrowser(input: SpeakBridgeWordInput): Promise<SpeakResul
   return { spoken: true };
 }
 
-function preferredServerLang(bridgeCode: string, headword?: string): string | undefined {
+function preferredServerLang(
+  bridgeCode: string,
+  headword?: string,
+  voiceLang?: StandInVoiceLang,
+): string | undefined {
+  if (voiceLang) return voiceLang;
   const choices =
     headword !== undefined && headword.trim() !== ''
       ? usableStandInLangs(bridgeCode, headword)
@@ -323,6 +332,10 @@ function preferredServerLang(bridgeCode: string, headword?: string): string | un
 
 function wasmVoiceForBridge(bridgeCode: string, headword?: string): WasmVoiceLang {
   const lang = preferredServerLang(bridgeCode, headword);
+  return wasmVoiceForLang(lang);
+}
+
+function wasmVoiceForLang(lang: string | undefined): WasmVoiceLang {
   if (lang === 'no') return 'nb';
   if (
     lang === 'nl' ||
@@ -346,7 +359,7 @@ async function speakWithServer(
   input: SpeakBridgeWordInput,
   engine: 'cloud' | 'local',
 ): Promise<boolean> {
-  const preferredLang = preferredServerLang(input.bridgeCode, input.text);
+  const preferredLang = preferredServerLang(input.bridgeCode, input.text, input.voiceLang);
   const cacheKey = JSON.stringify({
     engine,
     text: input.text,
@@ -379,7 +392,12 @@ async function speakWithWasmEngine(input: SpeakBridgeWordInput): Promise<SpeakRe
   const text = resolveSpeakText(input).trim();
   if (!text) return { spoken: true };
   try {
-    await speakWithWasm(text, wasmVoiceForBridge(input.bridgeCode, input.text));
+    await speakWithWasm(
+      text,
+      input.voiceLang
+        ? wasmVoiceForLang(input.voiceLang)
+        : wasmVoiceForBridge(input.bridgeCode, input.text),
+    );
     return { spoken: true };
   } catch {
     return { spoken: false, message: 'WASM TTS failed to load' };

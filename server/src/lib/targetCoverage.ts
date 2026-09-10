@@ -73,12 +73,24 @@ function countCovered(lemmas: string[], covered: Set<string>): number {
   return n;
 }
 
+/**
+ * Coverage-scoring target lists, where narrower than a bridge's full target list
+ * (BRIDGE_TARGETS). Interlingua's IEDICT source dictionary only drew cognates from
+ * Spanish, French, Italian and Portuguese -- Catalan and Romanian are valid study
+ * targets elsewhere in the app, but were never part of the source data this bridge's
+ * cognates were derived from, so scoring coverage against them would be meaningless.
+ */
+const COVERAGE_TARGET_OVERRIDES: Record<string, string[]> = {
+  ia: ['es', 'fr', 'it', 'pt'],
+};
+
 /** Bridges that list this target (experimental Finnish omitted from the assessment). */
 export function bridgesForTarget(targetCode: string): string[] {
   const codes: string[] = [];
   for (const [bridge, targets] of Object.entries(BRIDGE_TARGETS)) {
     if (bridge === 'fin') continue;
-    if (targets.includes(targetCode)) codes.push(bridge);
+    const effectiveTargets = COVERAGE_TARGET_OVERRIDES[bridge] ?? targets;
+    if (effectiveTargets.includes(targetCode)) codes.push(bridge);
   }
   return codes;
 }

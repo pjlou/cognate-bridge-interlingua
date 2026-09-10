@@ -6,6 +6,7 @@ import { config } from './config.js';
 import { getPool } from './db.js';
 import { authRouter } from './routes/auth.js';
 import { contentRouter } from './routes/content.js';
+import { decksRouter } from './routes/decks.js';
 import { ttsRouter } from './routes/tts.js';
 
 // Compiled output lives in server/dist, so the licence directory is one level up from
@@ -46,6 +47,7 @@ export function createApp() {
 
   app.use('/api/auth', authRouter);
   app.use('/api/tts', ttsRouter);
+  app.use('/api', decksRouter);
   app.use('/api', contentRouter);
 
   app.use((_req: Request, res: Response) => {

@@ -124,6 +124,16 @@
   grid-template-columns: 3.2rem minmax(120px, 0.8fr) auto minmax(120px, 1.2fr) auto auto auto;
 }
 
+/* Target dictionaries always show frequency rank, so the lemma stays directly
+   beside its rank even when the main sort is alphabetical. */
+.word-list--target .word__summary {
+  grid-template-columns: 3.2rem minmax(120px, 0.8fr) minmax(160px, 1.6fr) auto minmax(220px, 1.6fr) auto;
+}
+
+.word-list--target.word-list--game .word__summary {
+  grid-template-columns: 3.2rem minmax(120px, 0.8fr) minmax(160px, 1.6fr) auto auto minmax(220px, 1.6fr) auto;
+}
+
 .word__summary:hover {
   background: var(--surface-sunk);
 }

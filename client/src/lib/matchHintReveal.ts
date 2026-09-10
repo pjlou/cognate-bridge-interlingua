@@ -20,6 +20,7 @@ export const ROMANCE_HINT_LANGS: ReadonlyArray<{ code: RomanceHintLang; label: s
 
 const SIDE_KEY = (bridge: string) => `cb.matchHint.side.${bridge}`;
 const LANG_KEY = (bridge: string) => `cb.matchHint.lang.${bridge}`;
+const SWAP_KEY = (bridge: string) => `cb.matchHint.swap.${bridge}`;
 
 const ROMANCE_CODES = new Set<string>(ROMANCE_HINT_LANGS.map((l) => l.code));
 
@@ -74,6 +75,14 @@ export function writeHintRevealPref(bridgeCode: string, pref: HintRevealPref): v
   } catch {
     /* private mode */
   }
+}
+
+export function readHintRevealSwap(bridgeCode: string): boolean {
+  return readStored(SWAP_KEY(bridgeCode)) === 'true';
+}
+
+export function writeHintRevealSwap(bridgeCode: string, swap: boolean): void {
+  writeStored(SWAP_KEY(bridgeCode), String(swap));
 }
 
 export type HintPeekResolution =

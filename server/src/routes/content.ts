@@ -5,6 +5,7 @@ import { buildTargetCoverage } from '../lib/targetCoverage.js';
 import { authenticateToken, optionalAuth, requireUser } from '../middleware/auth.js';
 import {
   attachCognates,
+  browseTargetVocabulary,
   browseVocabulary,
   getBridgeByCode,
   getGameLemmaPool,
@@ -186,6 +187,47 @@ contentRouter.put(
     }
 
     res.json(all.filter((target) => parsed.data.target_language_ids.includes(target.id)));
+  }),
+);
+
+contentRouter.get(
+  '/bridges/:code/target-vocabulary',
+  optionalAuth,
+  asyncHandler(async (req, res) => {
+    const bridge = await getBridgeByCode(req.params.code!);
+    if (!bridge) {
+      res.status(404).json({ error: 'Unknown bridge language' });
+      return;
+    }
+    const target = typeof req.query.target === 'string' ? req.query.target : '';
+    if (!target) {
+      res.status(400).json({ error: 'target is required' });
+      return;
+    }
+    const limit = Math.min(Number(req.query.limit) || 40, 100);
+    const offset = Math.max(Number(req.query.offset) || 0, 0);
+    const search = typeof req.query.search === 'string' ? req.query.search : undefined;
+    const coverageRaw = typeof req.query.coverage === 'string' ? req.query.coverage : 'all';
+    const coverage = ['all', 'covered', 'uncovered'].includes(coverageRaw)
+      ? (coverageRaw as 'all' | 'covered' | 'uncovered')
+      : 'all';
+    const sortRaw = typeof req.query.sort === 'string' ? req.query.sort : 'frequency';
+    const sort = sortRaw === 'headword' ? 'headword' : 'frequency';
+    const cognateRaw = typeof req.query.english_cognates === 'string' ? req.query.english_cognates : 'all';
+    const englishCognates = ['all', 'with', 'without'].includes(cognateRaw)
+      ? (cognateRaw as 'all' | 'with' | 'without')
+      : 'all';
+    const selectedIds = req.user ? await listUserTargetLanguageIds(req.user.id) : [];
+    const targets = await listTargetLanguages();
+    res.json(await browseTargetVocabulary(req.params.code!, target, {
+      search,
+      limit,
+      offset,
+      coverage,
+      sort,
+      englishCognates,
+      selectedTargetCodes: targets.filter((item) => selectedIds.includes(item.id)).map((item) => item.code),
+    }));
   }),
 );
 

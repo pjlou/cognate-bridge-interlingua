@@ -58,6 +58,15 @@ describe('matchingEngine', () => {
     expect(BOARD_SLOT_SIDES[8]).toBe('bridge');
   });
 
+  it('randomizes the unmatched tile slot', () => {
+    const eng = createMatchingEngine(pool(12), () => 0);
+    const unmatchedId = [...new Set(eng.tiles.map((tile) => tile.lemmaId))].find(
+      (id) => eng.tiles.filter((tile) => tile.lemmaId === id).length === 1,
+    );
+    expect(unmatchedId).toBeDefined();
+    expect(eng.tiles.findIndex((tile) => tile.lemmaId === unmatchedId)).toBe(0);
+  });
+
   it('detects matching EN/bridge sides of the same lemma', () => {
     const eng = createMatchingEngine(pool(12), () => 0);
     const pair = eng.tiles.filter((tile) => tile.lemmaId === eng.tiles[0]!.lemmaId);

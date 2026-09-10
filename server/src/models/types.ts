@@ -108,6 +108,36 @@ export interface VocabularyItem {
   tier?: 1 | 2;
   /** Whether this study-queue card is being introduced or re-reviewed. */
   queue_kind?: 'new' | 'review';
+  /**
+   * 'deck' on a card shaped from a user-imported deck (see server/src/models/
+   * deckContent.model.ts) rather than the curated bridge_vocabulary content. Absent
+   * (not 'builtin') on ordinary bridge cards, so existing callers that never check
+   * this field keep working unchanged.
+   */
+  source?: 'deck';
+  deck_id?: number;
+  deck_card_id?: number;
+  /** Which fields have stored audio, for the play-stored-clip-before-TTS preference. */
+  has_audio?: { english: boolean; bridge: boolean; target: boolean };
+}
+
+export type DeckStatus = 'mapping' | 'translating' | 'ready' | 'failed';
+
+export interface DeckSummary {
+  id: number;
+  owner_user_id: number;
+  bridge_language_id: number | null;
+  bridge_language_code: string | null;
+  target_language_id: number | null;
+  target_language_code: string | null;
+  target_language_name: string | null;
+  name: string;
+  source_filename: string | null;
+  status: DeckStatus;
+  card_count: number;
+  untranslated_count: number;
+  created_at: string;
+  translated_at: string | null;
 }
 
 export interface GrammarParallel {

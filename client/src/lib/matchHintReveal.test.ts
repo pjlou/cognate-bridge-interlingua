@@ -3,8 +3,10 @@ import type { GameLemma } from './matchingEngine';
 import {
   hintLangAllowed,
   readHintRevealPref,
+  readHintRevealSwap,
   resolveHintReveal,
   writeHintRevealPref,
+  writeHintRevealSwap,
 } from './matchHintReveal';
 
 function lemma(overrides: Partial<GameLemma> = {}): GameLemma {
@@ -41,6 +43,13 @@ describe('matchHintReveal', () => {
     expect(hintLangAllowed('fin', 'pt')).toBe(false);
     expect(hintLangAllowed('ia', 'off')).toBe(true);
     expect(hintLangAllowed('fin', 'off')).toBe(true);
+  });
+
+  it('persists the tile swap per bridge', () => {
+    expect(readHintRevealSwap('ia')).toBe(false);
+    writeHintRevealSwap('ia', true);
+    expect(readHintRevealSwap('ia')).toBe(true);
+    expect(readHintRevealSwap('fin')).toBe(false);
   });
 
   it('migrates legacy side=off to off even if a language was stored', () => {

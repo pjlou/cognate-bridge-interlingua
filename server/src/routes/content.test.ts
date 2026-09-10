@@ -86,7 +86,7 @@ describe.skipIf(!hasTestDatabase)('content routes', () => {
 
       const estonian = talo.cognates.find((c: { target_word: string }) => c.target_word === 'talu');
       expect(estonian.target_language.code).toBe('et');
-      expect(estonian.rule.description).toMatch(/Finnic/);
+      expect(estonian.rule.name).toMatch(/Finnic/);
       expect(estonian.rule.source_note).toMatch(/Wikibooks/);
     });
 
@@ -153,6 +153,43 @@ describe.skipIf(!hasTestDatabase)('content routes', () => {
 
     it('404s on an unknown bridge', async () => {
       expect((await request(app).get('/api/bridges/nope/vocabulary')).status).toBe(404);
+    });
+  });
+
+  describe('GET /api/bridges/:code/target-vocabulary', () => {
+    it('returns ranked target lemmas with bridge coverage and cognates', async () => {
+      const response = await request(app)
+        .get('/api/bridges/ia/target-vocabulary?target=it&search=cantare')
+        .set(...auth(token));
+
+      expect(response.status).toBe(200);
+      expect(response.body.total).toBeGreaterThan(0);
+      const covered = response.body.items.find((item: { cognates: { word: string }[] }) =>
+        item.cognates.some((cognate) => cognate.word === 'cantar'),
+      );
+      expect(covered).toBeDefined();
+      expect(covered?.covered).toBe(true);
+
+      const coveredOnly = await request(app)
+        .get('/api/bridges/ia/target-vocabulary?target=it&search=cantare&coverage=covered')
+        .set(...auth(token));
+      expect(coveredOnly.body.items.every((item: { covered: boolean }) => item.covered)).toBe(true);
+
+      const uncovered = await request(app)
+        .get('/api/bridges/ia/target-vocabulary?target=it&search=are&coverage=uncovered')
+        .set(...auth(token));
+      expect(uncovered.body.items.length).toBeGreaterThan(0);
+      expect(uncovered.body.items.every((item: { covered: boolean }) => !item.covered)).toBe(true);
+    });
+
+    it('does not expose a target that is not linked to the bridge', async () => {
+      const response = await request(app)
+        .get('/api/bridges/ia/target-vocabulary?target=en')
+        .set(...auth(token));
+
+      expect(response.status).toBe(200);
+      expect(response.body.total).toBe(0);
+      expect(response.body.items).toEqual([]);
     });
   });
 

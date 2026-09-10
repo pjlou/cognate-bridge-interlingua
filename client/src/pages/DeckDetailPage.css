@@ -1,0 +1,25 @@
+.deck-detail {
+  max-width: 640px;
+}
+
+.deck-detail__status {
+  color: var(--ink-soft);
+}
+
+.deck-detail__spin {
+  animation: spin 0.8s linear infinite;
+  vertical-align: -2px;
+  margin-right: 6px;
+}
+
+.deck-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.deck-detail__danger {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
